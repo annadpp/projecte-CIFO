@@ -1,0 +1,478 @@
+:root {
+  --red: #e20700;
+  --blue: #6db8cd;
+  --grey: #363329;
+  --titles: "Amatic SC", cursive;
+}
+
+html,
+body {
+  /* https://css-tricks.com/couple-takes-sticky-footer/ */
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  background: var(--red);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 200px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 150%;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .arrow {
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    border-top: 0.3em solid white;
+    border-right: 0.3em solid white;
+    position: absolute;
+    margin: 8% 0 0 2em;
+    z-index: 11;
+  }
+
+  .arrow-left {
+    transform: rotate(-135deg);
+    cursor: pointer;
+  }
+
+  .content {
+    flex: 1 0 auto;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: none;
+  }
+
+  .app-header .container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 2em;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10% 0 7% 0;
+  }
+
+  .middle {
+    border-radius: 3em 3em 0px 0px;
+    top: 0;
+    left: 0;
+    height: 87%;
+    top: 13%;
+    position: absolute;
+    z-index: 3;
+    background: white;
+    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
+    width: 100%;
+  }
+
+  .book {
+    font-family: var(--titles);
+    padding: 0.5em;
+    line-height: 0.9em;
+    font-size: 1.2em;
+  }
+
+  h1 {
+    font-family: var(--titles);
+    font-size: 2.8em;
+    line-height: 0.9em;
+    text-align: center;
+    margin: 1em 0 1.7em 0;
+  }
+
+  audio {
+    margin-top: 40%;
+  }
+
+  .portada-img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .portada-img img {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .estrecho {
+    background: var(--red);
+    border: 0.2em solid var(--red);
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    color: white;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0.7em 0;
+    cursor: pointer;
+    width: 40%;
+  }
+
+  .estrecho:hover {
+    background: white;
+    color: var(--red);
+  }
+
+  .ancho {
+    background: var(--red);
+    border: 0.2em solid var(--red);
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    color: white;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em auto 0 auto;
+    padding: 0.7em 2.5em;
+    cursor: pointer;
+    width: 70%;
+  }
+
+  .ancho:hover {
+    background: white;
+    color: var(--red);
+  }
+
+  #splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    transition: 1.5s ease;
+    z-index: 15;
+  }
+
+  #splash.fade {
+    display: none;
+  }
+
+  .grid-container {
+    z-index: 4;
+    position: absolute;
+    width: 85%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 43% auto 0 auto;
+    display: grid;
+    height: 70%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "subheader"
+      "article";
+  }
+
+  .subheader {
+    grid-area: subheader;
+  }
+
+  .subheader img {
+    width: 100%;
+    margin-top: -10%;
+  }
+
+  .article {
+    grid-area: article;
+  }
+
+  .grid-story {
+    height: 70%;
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 0.8fr 1.2fr;
+    gap: 5%;
+    grid-template-areas:
+      "charac word"
+      "void word";
+  }
+  .word {
+    grid-area: word;
+    color: var(--grey);
+    font-size: 1em;
+  }
+
+  .charac {
+    grid-area: charac;
+    border-radius: 1em;
+    width: 100%;
+    background: var(--grey);
+    border: 0.2em solid var(--grey);
+    content: url("../images/caperucita3.png");
+  }
+  .void {
+    grid-area: void;
+    opacity: 0;
+  }
+
+  .grid-button {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1.6fr 0.4fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5%;
+    z-index: 5;
+    grid-template-areas:
+      "btn1  log1"
+      "btn2  log2"
+      "btn3  log3";
+  }
+
+  .btn1 {
+    grid-area: btn1;
+    background: var(--red);
+    background-image: url(../images/caperucita3.png);
+  }
+
+  .btn2 {
+    grid-area: btn2;
+    background: var(--red);
+    background-image: url(../images/caperucita4.png);
+  }
+
+  .btn3 {
+    grid-area: btn3;
+    background: var(--red);
+    background-image: url(../images/caperucita5.png);
+  }
+
+  .log1 {
+    grid-area: log1;
+  }
+
+  .log2 {
+    grid-area: log2;
+  }
+
+  .log3 {
+    grid-area: log3;
+  }
+
+  .grid-button .item-cap {
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    border: 0.2em solid var(--red);
+    z-index: 5;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    color: white;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 38%;
+    background-position: left;
+  }
+
+  .item-cap div {
+    margin-left: 40%;
+  }
+
+  .grid-button .item-cap:hover {
+    background: white;
+    color: var(--red);
+    background-repeat: no-repeat;
+    background-size: 38%;
+    background-position: left;
+  }
+
+  .grid-button .item-cap img {
+    width: 25%;
+    margin: 0 1em 0 0.5em;
+  }
+
+  .grid-button .item-cap p {
+    margin: 0.3em 0;
+    font-size: 0.9em;
+  }
+
+  .grid-button .item-cap p strong {
+    font-size: 1.1em;
+  }
+
+  .grid-button .item-log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    background: var(--grey);
+    border: 0.2em solid var(--grey);
+    z-index: 5;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    background-image: url(../images/play-button.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .grid-button .item-log:hover {
+    background: white;
+    background-image: url(../images/play-button-dark.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+  }
+
+  /*Menú hamburguesa*/
+
+  #menu {
+    width: 2em;
+    height: 1.4em;
+    margin: 9% 2em 0 0;
+    cursor: pointer;
+    float: right;
+  }
+
+  .bar {
+    height: 0.25em;
+    width: 100%;
+    background-color: white;
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  #bar1 {
+    transform: translateY(-0.3em);
+  }
+
+  #bar3 {
+    transform: translateY(0.3em);
+  }
+
+  .change .bar {
+    background-color: var(--grey);
+  }
+
+  .change #bar1 {
+    transform: translateY(0.28em) rotate(-45deg);
+  }
+
+  .change #bar3 {
+    transform: translateY(-0.25em) rotate(45deg);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: var(--grey);
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .nav li a:hover {
+    font-weight: bold;
+    color: var(--red);
+  }
+
+  .nav a:before {
+    content: url("../images/linea.png");
+    width: 2em;
+  }
+
+  .nav a:hover:before {
+    content: url("../images/linearoja.png");
+    width: 2em;
+  }
+
+  .nav li {
+    list-style: none;
+    padding: 1em 0;
+    margin-left: 17%;
+  }
+
+  .nav {
+    padding: 0;
+    margin: 30% 10vw 10% 0;
+    transition: 0.5s ease;
+    display: none;
+  }
+
+  .nav img {
+    width: 60%;
+    margin: 10% 0 0 0;
+  }
+
+  .nav li p {
+    font-family: var(--titles);
+    font-size: 1.2em;
+    margin: -1.5em 0 0 30%;
+    width: 60%;
+    line-height: 0.9em;
+  }
+
+  .change {
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .menu-bg {
+    z-index: 9;
+    width: 0;
+    height: 0;
+    background: white;
+    transition: 0.3s ease;
+    border-radius: 4em;
+  }
+
+  .sub-bg {
+    z-index: 8;
+    width: 0;
+    height: 0;
+    background: var(--red);
+    transition: 0.3s ease;
+  }
+
+  .change-bg {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu-bg,
+  .sub-bg,
+  #menu-bar {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  #menu-bar {
+    z-index: 10;
+    width: 100%;
+  }
+}
+
+@media (min-width: 786px) {
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/caperucita.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>La moderna Caperucita</title>
+  </head>
+  <body>
+    <div class="container-portada" id="splash">
+      <div class="trick">
+        <div class="portada-img">
+          <img src="images/cap1.png" alt="Chica leyendo" />
+        </div>
+        <h1>LA MODERNA<br />CAPERUCITA</h1>
+        <button class="estrecho" onClick="empieza()">Empieza</button>
+      </div>
+    </div>
+
+    <div class="content" id="content">
+      <header class="app-header">
+        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <div class="container">
+          <h2>Léelo</h2>
+        </div>
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="index.html">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><a href="caperucita.html">Índice</a></li>
+            <li><img src="images/frentecap.png" alt="" /></li>
+            <li>
+              <p>LA MODERNA<br />CAPERUCITA</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sub-bg" id="sub-bg">
+          <div class="menu-bg" id="menu-bg"></div>
+        </div>
+      </header>
+
+      <div class="middle"></div>
+
+      <div class="grid-container">
+        <div class="subheader">
+          <img src="images/frentecap0.png" alt="" />
+          <p class="subtitle">¿Por dónde empezamos?</p>
+        </div>
+        <div class="article">
+          <div class="grid-button">
+            <div class="item-cap btn1">
+              <div>
+                <p><strong>Capítulo 1</strong></p>
+                <p>Lorem ipsum</p>
+              </div>
+            </div>
+            <div class="item-cap btn2">
+              <div>
+                <p><strong>Capítulo 1</strong></p>
+                <p>Lorem ipsum</p>
+              </div>
+            </div>
+            <div class="item-cap btn3">
+              <div>
+                <p><strong>Capítulo 1</strong></p>
+                <p>Lorem ipsum</p>
+              </div>
+            </div>
+            <div class="item-log log1">
+              <span></span>
+            </div>
+            <div class="item-log log2">
+              <span></span>
+            </div>
+            <div class="item-log log3">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /*Inicio -> OJO BUG*/
+      function empieza() {
+        document.getElementById("splash").classList.toggle("fade");
+      }
+
+      function inicio() {
+        document.getElementById("splash").classList.toggle("show");
+      }
+
+      /*Menú hamburguesa*/
+      function onClickMenu() {
+        document.getElementById("menu").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+        document.getElementById("sub-bg").classList.toggle("change-bg");
+      }
+    </script>
+  </body>
+</html>

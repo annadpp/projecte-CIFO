@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/app.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cuentos modernos para gente aburrida</title>
+  </head>
+  <body>
+    <div class="container-portada" id="splash">
+      <div class="trick">
+        <div class="portada-img">
+          <img src="images/index1.png" alt="Chica leyendo" />
+        </div>
+        <h1>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</h1>
+        <button class="estrecho" onClick="empieza()">Empieza</button>
+      </div>
+    </div>
+
+    <div class="content" id="content">
+      <header class="app-header">
+        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <div class="container">
+          <h2>Biblioteca</h2>
+        </div>
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="index.html">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><img src="images/frente.png" alt="" /></li>
+            <li>
+              <p>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sub-bg" id="sub-bg">
+          <div class="menu-bg" id="menu-bg"></div>
+        </div>
+      </header>
+
+      <div class="middle"></div>
+
+      <div class="grid-container">
+        <div class="subheader">
+          <img src="images/perfil.png" alt="" />
+          <p class="subtitle">¿Qué cuento quieres resolver?</p>
+        </div>
+        <div class="article">
+          <div class="grid-book">
+            <div class="book1 book-item">
+              <p class="book">LA MODERNA CAPERUCITA</p>
+            </div>
+            <div class="book2 book-item">
+              <p class="book">LA MODERNA CAPERUCITA</p>
+            </div>
+            <div class="book3 book-item">
+              <p class="book">LA MODERNA CAPERUCITA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /*Inicio -> OJO BUG*/
+      function empieza() {
+        document.getElementById("splash").classList.toggle("fade");
+      }
+
+      function inicio() {
+        document.getElementById("splash").classList.toggle("show");
+      }
+
+      /*Menú hamburguesa*/
+      function onClickMenu() {
+        document.getElementById("menu").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+        document.getElementById("sub-bg").classList.toggle("change-bg");
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+  <div class="content">
+      <header class="app-header">
+        <span class="arrow arrow-left"></span>
+        <div class="container">
+          <h2>Biblioteca</h2>
+        </div> 
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><a href="#">Índice</a></li>
+          </ul>
+-->

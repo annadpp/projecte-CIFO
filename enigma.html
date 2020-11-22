@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/caperucita.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>La moderna Caperucita</title>
+  </head>
+  <body class="white">
+    <div class="content" id="content">
+      <header class="app-header dark">
+        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <div class="container">
+          <h2>Enigma</h2>
+        </div>
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><a href="#">Índice</a></li>
+            <li><img src="images/cap1.png" alt="" /></li>
+            <li>
+              <p>LA MODERNA<br />CAPERUCITA</p>
+            </li>
+          </ul>
+        </div>
+        <div class="sub-bg" id="sub-bg">
+          <div class="menu-bg" id="menu-bg"></div>
+        </div>
+      </header>
+
+      <div class="middle-red">
+        <div class="trick">
+          <div class="subheader">
+            <div>
+              <img src="images/frentecap1.png" alt="" />
+              <p class="subtitle">Enigma 1</p>
+            </div>
+          </div>
+
+          <div class="grid-enigma container">
+            <div class="item-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer-red">.</footer>
+
+    <script>
+      /*Inicio -> OJO BUG*/
+      function empieza() {
+        document.getElementById("splash").classList.toggle("fade");
+      }
+
+      function inicio() {
+        document.getElementById("splash").classList.toggle("show");
+      }
+
+      /*Menú hamburguesa*/
+      function onClickMenu() {
+        document.getElementById("menu").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+        document.getElementById("sub-bg").classList.toggle("change-bg");
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+  <div class="content">
+      <header class="app-header">
+        <span class="arrow arrow-left"></span>
+        <div class="container">
+          <h2>Biblioteca</h2>
+        </div> 
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><a href="#">Índice</a></li>
+          </ul>
+-->
