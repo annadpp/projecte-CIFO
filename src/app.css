@@ -94,6 +94,11 @@ body {
     font-size: 1.2em;
   }
 
+  a {
+    color: var(--grey);
+    text-decoration: none;
+  }
+
   h1 {
     font-family: var(--titles);
     font-size: 2.8em;

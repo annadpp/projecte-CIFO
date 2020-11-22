@@ -27,10 +27,18 @@ body {
     flex-direction: column;
   }
 
+  body.enigma {
+    background: white;
+  }
+
   h2 {
     font-size: 150%;
     margin: 0 auto;
     color: white;
+  }
+
+  h2.enigma {
+    color: var(--grey);
   }
 
   .arrow {
@@ -39,6 +47,17 @@ body {
     height: 1.3em;
     border-top: 0.3em solid white;
     border-right: 0.3em solid white;
+    position: absolute;
+    margin: 8% 0 0 2em;
+    z-index: 11;
+  }
+
+  .arrow.enigma {
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    border-top: 0.3em solid var(--grey);
+    border-right: 0.3em solid var(--grey);
     position: absolute;
     margin: 8% 0 0 2em;
     z-index: 11;
@@ -72,6 +91,19 @@ body {
     font-size: 1.2em;
     font-weight: bold;
     margin: 10% 0 7% 0;
+    color: var(--grey);
+  }
+
+  .subtitle.enigma {
+    color: white;
+  }
+
+  .article p {
+    color: var(--grey);
+  }
+
+  .article.enigma p {
+    color: white;
   }
 
   .middle {
@@ -85,6 +117,18 @@ body {
     background: white;
     box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
     width: 100%;
+  }
+
+  .middle.enigma {
+    top: 0;
+    left: 0;
+    height: 87%;
+    top: 13%;
+    position: absolute;
+    z-index: 3;
+    background: var(--red);
+    width: 100%;
+    box-shadow: none;
   }
 
   .book {
@@ -147,7 +191,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: bold;
-    margin: 1em auto 0 auto;
+    margin: 10% auto 0 auto;
     padding: 0.7em 2.5em;
     cursor: pointer;
     width: 70%;
@@ -156,6 +200,27 @@ body {
   .ancho:hover {
     background: white;
     color: var(--red);
+  }
+
+  .ancho.enigma {
+    background: white;
+    border: 0.2em solid white;
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    color: var(--blue);
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10% auto 0 auto;
+    padding: 0.7em 2.5em;
+    cursor: pointer;
+    width: 70%;
+  }
+
+  .ancho.enigma:hover {
+    background: var(--blue);
+    color: white;
   }
 
   #splash {
@@ -297,6 +362,11 @@ body {
     margin-left: 40%;
   }
 
+  .item-cap a {
+    color: white;
+    text-decoration: none;
+  }
+
   .grid-button .item-cap:hover {
     background: white;
     color: var(--red);
@@ -357,6 +427,14 @@ body {
     height: 0.25em;
     width: 100%;
     background-color: white;
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .bar.enigma {
+    height: 0.25em;
+    width: 100%;
+    background-color: var(--grey);
     display: block;
     transition: 0.3s ease;
   }
