@@ -29,9 +29,7 @@
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left" onClick="inicio()"></div>
-
           <h2>Biblioteca</h2>
-
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
             <div id="bar1" class="bar"></div>
@@ -41,11 +39,11 @@
           <ul class="nav" id="nav">
             <li><a href="index.html">Biblioteca</a></li>
             <li><a href="#">Cómo leer</a></li>
-            <li><img src="images/frente.png" alt="" /></li>
-            <li>
-              <p>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</p>
-            </li>
           </ul>
+          <div id="desplega" class="desplega">
+            <img src="images/frente.png" alt="" />
+              <p>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</p>
+          </div>
         </div>
 
           <div class="menu-bg" id="menu-bg"></div>
@@ -94,6 +92,7 @@
       function onClickMenu() {
         document.getElementById("menu").classList.toggle("change");
         document.getElementById("nav").classList.toggle("change");
+        document.getElementById("desplega").classList.toggle("change");
         document.getElementById("menu-bg").classList.toggle("change-bg");
         document.getElementById("sub-bg").classList.toggle("change-bg");
       }
