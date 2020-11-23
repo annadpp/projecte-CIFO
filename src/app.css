@@ -29,18 +29,19 @@ body {
 
   h2 {
     font-size: 130%;
-    margin: 0 auto;
+    margin: 7% auto 0 auto;
     color: white;
+    text-align: center;
   }
 
   .arrow {
     display: inline-block;
-    width: 1.3em;
-    height: 1.3em;
+    width: 1em;
+    height: 1em;
     border-top: 0.3em solid white;
     border-right: 0.3em solid white;
     position: absolute;
-    margin: 8% 0 0 2em;
+    margin: 1% 0 0 2em;
     z-index: 11;
   }
 
@@ -62,9 +63,10 @@ body {
   .app-header .container {
     display: flex;
     width: 100%;
+    height: 30%;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5em 2em;
+    padding: 7% 2em;
     text-align: center;
   }
 
@@ -75,7 +77,7 @@ body {
   }
 
   .middle {
-    border-radius: 3em 0 0 0;
+    border-radius: 4em 0 0 0;
     top: 0;
     left: 0;
     height: 87%;
@@ -252,7 +254,7 @@ body {
   /*Menú hamburguesa*/
 
   #menu {
-    width: 2em;
+    width: 1.5em;
     height: 1.4em;
     margin: 9% 2em 0 0;
     cursor: pointer;
@@ -260,7 +262,7 @@ body {
   }
 
   .bar {
-    height: 0.25em;
+    height: 0.2em;
     width: 100%;
     background-color: white;
     display: block;
@@ -280,11 +282,11 @@ body {
   }
 
   .change #bar1 {
-    transform: translateY(0.28em) rotate(-45deg);
+    transform: translateY(0.22em) rotate(-45deg);
   }
 
   .change #bar3 {
-    transform: translateY(-0.25em) rotate(45deg);
+    transform: translateY(-0.19em) rotate(45deg);
   }
 
   .change #bar2 {
@@ -317,18 +319,19 @@ body {
     list-style: none;
     padding: 1em 0;
     margin-left: 17%;
+    text-align: center;
   }
 
   .nav {
     padding: 0;
-    margin: 30% 10vw 10% 0;
+    margin: 40% 10vw 10% 0;
     transition: 0.5s ease;
     display: none;
   }
 
   .nav img {
-    width: 60%;
-    margin: 10% 0 0 0;
+    width: 55%;
+    margin: 30% 0 0 -30%;
   }
 
   .nav li p {
@@ -337,6 +340,7 @@ body {
     margin: -1.5em 0 0 30%;
     width: 60%;
     line-height: 0.8em;
+    text-align: left;
   }
 
   .change {
@@ -350,15 +354,8 @@ body {
     height: 0;
     background: white;
     transition: 0.3s ease;
-    border-radius: 4em;
-  }
-
-  .sub-bg {
-    z-index: 8;
-    width: 0;
-    height: 0;
-    background: var(--palepink);
-    transition: 0.3s ease;
+    border-radius: 5em 0 0 0;
+    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
   }
 
   .change-bg {
@@ -367,7 +364,6 @@ body {
   }
 
   .menu-bg,
-  .sub-bg,
   #menu-bar {
     top: 0;
     right: 0;
