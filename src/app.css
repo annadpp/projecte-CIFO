@@ -165,7 +165,7 @@ body {
     right: 0;
     margin: 43% auto 0 auto;
     display: grid;
-    height: 82%;
+    height: 85%;
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1.8fr 0.6fr;
     gap: 0;
