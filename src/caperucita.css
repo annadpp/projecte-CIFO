@@ -40,6 +40,9 @@ body {
 
   h2.enigma {
     color: var(--grey);
+    font-size: 130%;
+    margin: 7% auto 0 auto;
+    text-align: center;
   }
 
   .arrow {
@@ -196,10 +199,10 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: bold;
-    margin: 0 auto 0 auto;
+    margin: 3% auto 0 auto;
     padding: 0.7em 2.5em;
     cursor: pointer;
-    width: 70%;
+    width: 100%;
   }
 
   .ancho:hover {
@@ -220,7 +223,7 @@ body {
     margin: 10% auto 0 auto;
     padding: 0.7em 2.5em;
     cursor: pointer;
-    width: 70%;
+    width: 100%;
   }
 
   .ancho.enigma:hover {
@@ -619,6 +622,11 @@ body {
   #menu-bar {
     z-index: 10;
     width: 100%;
+  }
+
+  /*lectura*/
+  .lectura {
+    transition: opacity 0.5s ease-in-out;
   }
 }
 

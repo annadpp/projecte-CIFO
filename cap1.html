@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/caperucita.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>La moderna Caperucita</title>
+  </head>
+  <body>
+    <div class="content" id="content">
+      <header class="app-header">
+        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <h2>Léelo</h2>
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="index.html">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><a href="caperucita.html">Índice</a></li>
+            <li><img src="images/frentecap.png" alt="" /></li>
+            <li><p>LA MODERNA CAPERUCITA</p></li>
+          </ul>
+        </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
+      </header>
+
+      <div class="middle"></div>
+
+      <div class="grid-container">
+        <div class="header"></div>
+        <div class="subheader">
+          <img src="images/cap1cap.png" alt="" />
+          <p class="subtitle">Capítulo 1</p>
+        </div>
+        <div class="article">
+          <div class="grid-story">
+            <div class="word lectura" id="word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="charac">
+              <img
+                class="lectura"
+                id="charac-img"
+                src="images/caperucita.png"
+                alt=""
+              />
+            </div>
+            <div class="void"></div>
+          </div>
+          <button id="next" class="ancho">Continua</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /*Inicio -> OJO BUG*/
+      function empieza() {
+        document.getElementById("splash").classList.toggle("fade");
+      }
+
+      function inicio() {
+        document.getElementById("splash").classList.toggle("show");
+      }
+
+      /*Menú hamburguesa*/
+      function onClickMenu() {
+        document.getElementById("menu").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+        document.getElementById("sub-bg").classList.toggle("change-bg");
+      }
+
+      /*Lectura*/
+      /**
+       * Constructor function for lineas
+       */
+      function linea(name, img, btn) {
+        this.name = name;
+        this.img = img;
+        this.btn = btn;
+      }
+
+      // An array containing all the lineas with their information CAPÍTULO 1 OK
+      var lineas = [
+        new linea(
+          "Había una vez una chica (aun a riesgo de asumir su género) joven llamada Caperucita Roja, que vivía en un extremo de un gran bosque lleno…",
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          "de fauna en peligro de extinción y plantas de superalimento cuyo objetivo en la vida era ser influencer, como esos que dictaban todas sus opiniones.",
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          'Caperucita vivía con una persona a la que se refería como "madre", aunque era consciente de que debía desterrar de su vocabulario este término, ya que…',
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          "tras mucho leer a sus ídolos en internet había aprendido que podía ofender a aquellas personas que no hubiesen contado con una figura paterna en su niñez.",
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          "Un día, mientras hacía yoga, “madre” le pidió que llevara una canasta de frutas cultivadas orgánicamente y agua mineral a la casa de su abuela.",
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          '"Pero, madre, ¿no será esto robarles trabajo a los riders, que necesitan de la economía colaborativa para subsistir?"',
+          "images/caperucita.png",
+          "Continua"
+        ),
+        new linea(
+          '"No te preocupes, acabo de llamar al sindicato y me han explicado que los envíos intrafamiliares…"',
+          "images/madre.png",
+          "Continua"
+        ),
+        new linea(
+          "pueden prescindir sin cargo de consciencia de los servicios de la economía capitalista.” ",
+          "images/madre.png",
+          "Continua"
+        ),
+        new linea(
+          '"Pero, madre, ¿no me estás oprimiendo al ordenarme que cumpla con los roles de género y proporcione cuidados a la tercera edad de forma no remunerada?"',
+          "images/caperucita.png",
+          "Continua"
+        ),
+        new linea(
+          '"Caperucita, ya sabes que en esta casa reina la sororidad. ¿No ves que todas las mujeres estamos igualmente oprimidas hasta que todas seamos libres?"',
+          "images/madre.png",
+          "Continua"
+        ),
+        new linea(
+          '"Pero, madre, entonces ¿no deberías hacer que se encargase mi hermano, ya que como hombre es un opresor, y debería aprender lo que es ser oprimido?"',
+          "images/caperucita.png",
+          "Continua"
+        ),
+        new linea(
+          '"Caperucita, tu hermano ha ido a una manifestación por los derechos de los murciélagos, ya que… desde el inicio de la crisis del Covid la sociedad les ha dado la espalda.',
+          "images/madre.png",
+          "Continua"
+        ),
+        new linea(
+          'Además, este no era un trabajo estereotipado de mujeres, sino una acción de empoderamiento que ayudaría a generar un sentimiento de comunidad."',
+          "images/madre.png",
+          "Continua"
+        ),
+        new linea(
+          '"¿Pero no estaré oprimiendo a la abuela, insinuando que está enferma y, por lo tanto, incapaz de promover de manera independiente su propia personalidad?"',
+          "images/caperucita.png",
+          "Continua"
+        ),
+        new linea(
+          "Pero la madre de Caperucita Roja explicó que su abuela en realidad no estaba enferma o incapacitada o mentalmente discapacitada de ninguna manera, aunque…",
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          'eso no implicaba que alguna de estas condiciones fuera inferior a lo que algunas personas llamaban "salud".',
+          "images/narrador.png",
+          "Continua"
+        ),
+        new linea(
+          "Así, Caperucita sintió que podía emprender el camino partió con destino a casa de su abuelita, no sin antes coger su móvil y...",
+          "images/narrador.png",
+          "Descubre el enigma"
+        ),
+      ];
+
+      // Cacheing HTML elements
+      var lectura = document.querySelector("#lectura");
+      var word = document.querySelector("#word");
+      var characImg = document.querySelector("#charac-img");
+      var next = document.querySelector("#next");
+
+      // Index of the current project being displayed
+      var index = 0;
+
+      next.addEventListener("click", function () {
+        if (next.innerHTML === "Descubre el enigma") {
+          location.replace("https://www.w3schools.com");
+        } else {
+          // Fade out
+          word.style.opacity = 0;
+          characImg.style.opacity = 0;
+
+          // Fade in
+          setTimeout(function () {
+            word.innerHTML = lineas[index].name;
+            characImg.src = lineas[index].img;
+            next.innerHTML = lineas[index].btn;
+            index = (index + 1) % lineas.length;
+            word.style.opacity = 1;
+            characImg.style.opacity = 1;
+          }, 500);
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!--
+  <div class="content">
+      <header class="app-header">
+        <span class="arrow arrow-left"></span>
+        <div class="container">
+          <h2>Biblioteca</h2>
+        </div> 
+        <div id="menu-bar">
+          <div id="menu" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Cómo leer</a></li>
+            <li><a href="#">Índice</a></li>
+          </ul>
+-->
