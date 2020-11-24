@@ -190,12 +190,12 @@
       var characImg = document.querySelector("#charac-img");
       var next = document.querySelector("#next");
 
-      // Index of the current project being displayed
+      // Index of the current project being displayed /*RECUERDA REDIRIGIR LA URL AL HACER .JS*/
       var index = 0;
 
       next.addEventListener("click", function () {
         if (next.innerHTML === "Descubre el enigma") {
-          location.replace("https://www.w3schools.com");
+          location.replace("enigma.html");
         } else {
           // Fade out
           word.style.opacity = 0;
