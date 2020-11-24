@@ -152,6 +152,7 @@ body {
 
   audio {
     margin-top: 40%;
+    width: 100%;
   }
 
   .portada-img {
@@ -518,6 +519,13 @@ body {
     opacity: 0;
   }
 
+  .nav {
+    padding: 0;
+    margin: 45% 10% 0 0;
+    width: 90%;
+    display: none;
+  }
+
   .nav li a {
     text-decoration: none;
     color: var(--grey);
@@ -544,14 +552,6 @@ body {
     list-style: none;
     padding: 1em 0;
     margin-left: 17%;
-  }
-
-  .nav {
-    padding: 0;
-    margin: 45% 10% 0 0;
-    width: 90%;
-
-    display: none;
   }
 
   .nav li img {
@@ -592,7 +592,6 @@ body {
 
   .change {
     display: block;
-    transition: 0.3s ease;
   }
 
   .menu-bg {
@@ -600,7 +599,7 @@ body {
     width: 0;
     height: 0;
     background: white;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
     border-radius: 5em 0 0 0;
     box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
   }
