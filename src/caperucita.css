@@ -46,8 +46,8 @@ body {
     display: inline-block;
     width: 1em;
     height: 1em;
-    border-top: 0.3em solid white;
-    border-right: 0.3em solid white;
+    border-top: 0.25em solid white;
+    border-right: 0.25em solid white;
     position: absolute;
     margin: 1% 0 0 2em;
     z-index: 11;
@@ -109,7 +109,7 @@ body {
   }
 
   .middle {
-    border-radius: 4em 0 0px 0px;
+    border-radius: 3em 0 0px 0px;
     top: 0;
     left: 0;
     height: 87%;
@@ -194,7 +194,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: bold;
-    margin: 10% auto 0 auto;
+    margin: 7% auto 0 auto;
     padding: 0.7em 2.5em;
     cursor: pointer;
     width: 70%;
@@ -303,9 +303,12 @@ body {
     border-radius: 1em;
     width: 100%;
     background: var(--grey);
-    border: 0.2em solid var(--grey);
-    content: url("../images/caperucita3.png");
   }
+
+  .charac img {
+    width: 100%;
+  }
+
   .void {
     grid-area: void;
     opacity: 0;
