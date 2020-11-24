@@ -300,7 +300,7 @@ body {
   .word {
     grid-area: word;
     color: var(--grey);
-    font-size: 1em;
+    font-size: 2.7vh;
   }
 
   .charac {
