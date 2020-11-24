@@ -61,7 +61,7 @@ body {
     border-right: 0.3em solid var(--grey);
     position: absolute;
     margin: 1% 0 0 2em;
-    z-index: 11;
+    z-index: 8;
   }
 
   .arrow-left {
@@ -122,6 +122,7 @@ body {
   }
 
   .middle.enigma {
+    border-radius: 3em 0 0px 0px;
     top: 0;
     left: 0;
     height: 87%;
@@ -129,8 +130,8 @@ body {
     position: absolute;
     z-index: 3;
     background: var(--red);
+    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
     width: 100%;
-    box-shadow: none;
   }
 
   .book {
@@ -311,6 +312,25 @@ body {
 
   .void {
     grid-area: void;
+    opacity: 0;
+  }
+
+  .grid-enigma {
+    height: 90%;
+    display: grid;
+    grid-template-rows: 1.8fr 0.2fr;
+    grid-template-areas:
+      "enigma-text"
+      "enigma-void";
+  }
+  .enigma-text {
+    grid-area: word;
+    color: var(--grey);
+    font-size: 1em;
+  }
+
+  .enigma-void {
+    grid-area: enigma-void;
     opacity: 0;
   }
 
@@ -514,14 +534,15 @@ body {
     display: none;
   }
 
-  .desplega img {
-    width: 70%;
+  .nav li img {
+    width: 50%;
+    padding: 0 0 0 0;
   }
 
-  .desplega p {
+  .nav li p {
     font-family: var(--titles);
     font-size: 1em;
-    margin: 7% 0 0 30%;
+    margin: -10% 0 0 30%;
     width: 60%;
     line-height: 0.8em;
     text-align: left;
@@ -532,8 +553,21 @@ body {
     transition: 0.5s ease;
     position: absolute;
     top: 0;
-    margin: 90% 0 30% 20%;
-    width: 50%;
+    margin: 103% 0 30% 15%;
+    width: 58%;
+    z-index: 15;
+  }
+
+  .desplega img {
+    width: 65%;
+  }
+
+  .desplega p {
+    font-family: var(--titles);
+    font-size: 1em;
+    margin: 5% 0 0 40%;
+    line-height: 0.8em;
+    text-align: left;
   }
 
   .change {

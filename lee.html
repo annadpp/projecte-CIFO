@@ -16,10 +16,20 @@
     <title>La moderna Caperucita</title>
   </head>
   <body>
+    <div class="container-portada" id="splash">
+      <div class="trick">
+        <div class="portada-img">
+          <img src="images/cap1.png" alt="La moderna Caperucita" />
+        </div>
+        <h1>LA MODERNA<br />CAPERUCITA</h1>
+        <button class="estrecho" onClick="empieza()">Empieza</button>
+      </div>
+    </div>
+
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left" onClick="inicio()"></div>
-        <h2>Léelo</h2>
+        <h2>Índice</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
             <div id="bar1" class="bar"></div>
@@ -30,11 +40,9 @@
             <li><a href="index.html">Biblioteca</a></li>
             <li><a href="#">Cómo leer</a></li>
             <li><a href="caperucita.html">Índice</a></li>
+            <li><img src="images/frentecap.png" alt="" /></li>
+            <li><p>LA MODERNA CAPERUCITA</p></li>
           </ul>
-          <div id="desplega" class="desplega">
-            <img src="images/frentecap.png" alt="" />
-            <p>LA MODERNA CAPERUCITA</p>
-          </div>
         </div>
 
         <div class="menu-bg" id="menu-bg"></div>

@@ -19,43 +19,48 @@
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left enigma" onClick="inicio()"></div>
-        <div class="container">
-          <h2 class="enigma">Enigma</h2>
-        </div>
+        <h2 class="enigma">Enigma</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
             <div id="bar1" class="bar enigma"></div>
             <div id="bar2" class="bar enigma"></div>
             <div id="bar3" class="bar enigma"></div>
           </div>
+          <div id="desplega" class="desplega">
+            <img src="images/frentecap.png" alt="" />
+            <p>LA MODERNA CAPERUCITA</p>
+          </div>
           <ul class="nav" id="nav">
             <li><a href="index.html">Biblioteca</a></li>
             <li><a href="#">Cómo leer</a></li>
             <li><a href="caperucita.html">Índice</a></li>
             <li><img src="images/frentecap.png" alt="" /></li>
-            <li>
-              <p>LA MODERNA<br />CAPERUCITA</p>
-            </li>
+            <li><p>LA MODERNA CAPERUCITA</p></li>
           </ul>
         </div>
 
-        <div class="sub-bg" id="sub-bg">
-          <div class="menu-bg" id="menu-bg"></div>
-        </div>
+        <div class="menu-bg" id="menu-bg"></div>
       </header>
 
       <div class="middle enigma"></div>
 
       <div class="grid-container">
+        <div class="header"></div>
         <div class="subheader">
           <img src="images/frentecap1.png" alt="" />
           <p class="subtitle enigma">Capítulo 1</p>
         </div>
         <div class="article enigma">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <div class="grid-enigma">
+            <div class="enigma-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="enigma-void"></div>
+          </div>
           <button class="ancho enigma">Continua</button>
         </div>
       </div>
