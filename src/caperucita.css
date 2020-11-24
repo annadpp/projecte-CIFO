@@ -324,13 +324,33 @@ body {
       "enigma-void";
   }
   .enigma-text {
-    grid-area: word;
+    grid-area: enigma-text;
     color: var(--grey);
     font-size: 1em;
   }
 
   .enigma-void {
     grid-area: enigma-void;
+    opacity: 0;
+  }
+
+  .grid-audio {
+    height: 90%;
+    display: grid;
+    grid-template-rows: 1.8fr 0.2fr;
+    grid-template-areas:
+      "audio-player"
+      "audio-void";
+  }
+
+  .audio-player {
+    grid-area: audio-player;
+    color: var(--grey);
+    font-size: 1em;
+  }
+
+  .audio-void {
+    grid-area: audio-void;
     opacity: 0;
   }
 
@@ -530,7 +550,7 @@ body {
     padding: 0;
     margin: 45% 10% 0 0;
     width: 90%;
-    transition: 0.5s ease;
+
     display: none;
   }
 
