@@ -28,7 +28,7 @@
 
     <div class="content" id="content">
       <header class="app-header">
-        <div class="arrow arrow-left" onClick="atras()"></div>
+        <div class="arrow arrow-left" onClick="inicio()"></div>
         <h2>Biblioteca</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
@@ -83,8 +83,8 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function atras() {
-        document.getElementById("splash").classList.toggle("show");
+      function inicio() {
+        location.replace("index.html");
       }
 
       /*Menú hamburguesa*/

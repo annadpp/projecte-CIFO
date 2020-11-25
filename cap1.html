@@ -18,7 +18,7 @@
   <body>
     <div class="content" id="content">
       <header class="app-header">
-        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <div class="arrow arrow-left" onClick="indice()"></div>
         <h2>Léelo</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
@@ -65,8 +65,8 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function inicio() {
-        document.getElementById("splash").classList.toggle("show");
+      function indice() {
+        location.replace("indice.html");
       }
 
       /*Menú hamburguesa*/

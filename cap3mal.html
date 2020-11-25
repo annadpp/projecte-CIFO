@@ -18,7 +18,7 @@
   <body>
     <div class="content" id="content">
       <header class="app-header">
-        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <div class="arrow arrow-left" onClick="cap3()"></div>
         <h2>Léelo</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
@@ -65,8 +65,8 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function inicio() {
-        document.getElementById("splash").classList.toggle("show");
+      function cap3() {
+        location.replace("cap3.html");
       }
 
       /*Menú hamburguesa*/
@@ -168,7 +168,7 @@
         new linea(
           "Así pues, si Caperucita hubiese recapacitado y hubiese analizado fríamente todo lo que le llegaba de internet, ahora podría seguir navegando por la red.",
           "images/narrador.png",
-          "Descubre el enigma"
+          "¿Y ahora qué?"
         ),
       ];
 
@@ -182,8 +182,8 @@
       var index = 0;
 
       next.addEventListener("click", function () {
-        if (next.innerHTML === "Descubre el enigma") {
-          location.replace("enigma.html");
+        if (next.innerHTML === "¿Y ahora qué?") {
+          location.replace("finalmal.html");
         } else {
           // Fade out
           word.style.opacity = 0;
