@@ -28,7 +28,7 @@
 
     <div class="content" id="content">
       <header class="app-header">
-        <div class="arrow arrow-left" onClick="inicio()"></div>
+        <div class="arrow arrow-left" onClick="atras()"></div>
         <h2>Biblioteca</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
@@ -62,12 +62,12 @@
         <div class="article">
           <div class="grid-book">
             <div class="book1 book-item">
-              <a href="caperucita.html"
+              <a href="indice.html"
                 ><p class="book">LA MODERNA CAPERUCITA</p></a
               >
             </div>
             <div class="book2 book-item">
-              <p class="book">LA MODERNA CAPERUCITA</p>
+              <p class="book">LOS MODERNOS HANSEL Y GRETEL</p>
             </div>
             <div class="book3 book-item">
               <p class="book">LA MODERNA CAPERUCITA</p>
@@ -83,7 +83,7 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function inicio() {
+      function atras() {
         document.getElementById("splash").classList.toggle("show");
       }
 

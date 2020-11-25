@@ -1,0 +1,366 @@
+
+//SIGUIENTE CAPÍTULO
+
+<div id="project" class="reveal">
+    <div id="proj_name"></div>
+    <img id="proj_img" src=""><br>
+</div>
+<button id="proj_switcher">Next Project</button>
+
+#project {
+
+   transition: opacity .5s ease-in-out;
+}
+
+
+
+/**
+ * Constructor function for Projects
+ */
+function Project(name, img, btn) {
+  this.name = name;
+  this.img = img;
+  this.btn = btn;
+}
+
+// An array containing all the projects with their information CAPÍTULO 1 OK
+var projects = [
+new Project('Había una vez una chica (aun a riesgo de asumir su género) joven llamada Caperucita Roja, que vivía en un extremo de un gran bosque lleno…', 'images/narrador.png', 'Continua'),
+new Project('de fauna en peligro de extinción y plantas de superalimento cuyo objetivo en la vida era ser influencer, como esos que dictaban todas sus opiniones.', 'images/narrador.png', 'Continua'),
+new Project('Caperucita vivía con una persona a la que se refería como "madre", aunque era consciente de que debía desterrar de su vocabulario este término, ya que…', 'images/narrador.png', 'Continua'),
+new Project('tras mucho leer a sus ídolos en internet había aprendido que podía ofender a aquellas personas que no hubiesen contado con una figura paterna en su niñez.', 'images/narrador.png', 'Continua'),
+new Project('Un día, mientras hacía yoga, “madre” le pidió que llevara una canasta de frutas cultivadas orgánicamente y agua mineral a la casa de su abuela.', 'images/narrador.png', 'Continua'),
+new Project('"Pero, madre, ¿no será esto robarles trabajo a los riders, que necesitan de la economía colaborativa para subsistir?"', 'images/caperucita.png', 'Continua'),
+new Project('"No te preocupes, acabo de llamar al sindicato y me han explicado que los envíos intrafamiliares…"', 'images/madre.png', 'Continua'),
+new Project('pueden prescindir sin cargo de consciencia de los servicios de la economía capitalista.” ', 'images/madre.png', 'Continua'),
+new Project('"Pero, madre, ¿no me estás oprimiendo al ordenarme que cumpla con los roles de género y proporcione cuidados a la tercera edad de forma no remunerada?"', 'images/caperucita.png', 'Continua'),
+new Project('"Caperucita, ya sabes que en esta casa reina la sororidad. ¿No ves que todas las mujeres estamos igualmente oprimidas hasta que todas seamos libres?"', 'images/madre.png', 'Continua'),
+new Project('"Pero, madre, entonces ¿no deberías hacer que se encargase mi hermano, ya que como hombre es un opresor, y debería aprender lo que es ser oprimido?"', 'images/caperucita.png', 'Continua'),
+new Project('"Caperucita, tu hermano ha ido a una manifestación por los derechos de los murciélagos, ya que… desde el inicio de la crisis del Covid la sociedad les ha dado la espalda.', 'images/madre.png', 'Continua'),
+new Project('Además, este no era un trabajo estereotipado de mujeres, sino una acción de empoderamiento que ayudaría a generar un sentimiento de comunidad."', 'images/madre.png', 'Continua'),
+new Project('"¿Pero no estaré oprimiendo a la abuela, insinuando que está enferma y, por lo tanto, incapaz de promover de manera independiente su propia personalidad?"', 'images/caperucita.png', 'Continua'),
+new Project('Pero la madre de Caperucita Roja explicó que su abuela en realidad no estaba enferma o incapacitada o mentalmente discapacitada de ninguna manera, aunque…', 'images/narrador.png', 'Continua'),
+new Project('eso no implicaba que alguna de estas condiciones fuera inferior a lo que algunas personas llamaban "salud".', 'images/narrador.png', 'Continua'),
+new Project('Así, Caperucita sintió que podía emprender el camino partió con destino a casa de su abuelita, no sin antes coger su móvil y...', 'images/narrador.png', 'Descubre el enigma')
+];
+
+// Cacheing HTML elements
+var project = document.querySelector('#project');
+var projName   = document.querySelector('#proj_name');
+var projImg    = document.querySelector('#proj_img');
+var projButton = document.querySelector('#proj_switcher');
+
+// Index of the current project being displayed
+var projIndex = 0;
+
+projButton.addEventListener('click', function() {
+
+  if (projButton.innerHTML === "Descubre el enigma") {
+location.replace("https://www.w3schools.com");
+} else {
+  
+  // Fade out
+  project.style.opacity = 0;
+  
+  // Fade in 
+  setTimeout(function(){ 
+      projName.innerHTML = projects[projIndex].name;
+      projImg.src = projects[projIndex].img;
+      projImg.style.width = '250px';
+      projImg.style.height = '150px';
+      projButton.innerHTML = projects[projIndex].btn;
+      projIndex = (projIndex + 1) % projects.length;
+      project.style.opacity = 1;
+  },500);
+
+}
+  
+});
+
+// CAPÍTULO 2 PARTE 1 OK
+
+var projects = [
+new Project('Mucha gente creía que el bosque era un lugar peligroso y siniestro, ya que, como todo…', 'images/narrador.png', 'Continua'),
+new Project('el mundo sabe, estamos abocados a la extinción de la vida extraurbana.', 'images/narrador.png', 'Continua'),
+new Project('No obstante, Caperucita había leído en un blog que eso no era más que un miedo irracional basado en paradigmas culturales inculcados… ', 'images/narrador.png', 'Continua'),
+new Project('por una sociedad patriarcal que consideraba el mundo natural como un recurso explotable.', 'images/narrador.png', 'Continua'),
+new Project('Aunque, por otra parte, en algunos comentarios de Facebook había leído que el verdadero motivo por el que muchas personas…', 'images/narrador.png', 'Continua'),
+new Project('evitaban los bosques era por miedo a los ladrones, mayoritariamente extranjeros, por supuesto.', 'images/narrador.png', 'Continua'),
+new Project('Al yo puro que quedaba dentro de ella algo le decía que debíamos enfocarnos en ser una sociedad verdaderamente sin clases, donde… ', 'images/narrador.png', 'Continua'),
+new Project('todos los pueblos marginados podrían "salir" del bosque y ser aceptados como modelos válidos de estilo de vida, siempre sin coartar las libertades de los demás. ', 'images/narrador.png', 'Descubre el enigma')
+];
+
+
+// CAPÍTULO 2 PARTE 2 OK
+
+var projects = [
+new Project('De camino a la casa de la abuela, Caperucita se cruzó con un leñador, que estaba absorto en su móvil y ni siquiera se dio cuenta de su presencia. ', 'images/narrador.png', 'Continua'),
+new Project('¿Dónde han quedado los antiguos modales? ¡Cuando te encontrabas con otra persona en la naturaleza había que saludarle! ', 'images/narrador.png', 'Continua'),
+new Project('Por suerte, no todo estaba perdido, y de pronto Caperucita se sorprendió al verse interpelada por un lobo, quien le preguntó qué había en su canasta. ', 'images/narrador.png', 'Continua'),
+new Project('Por mucho que de pequeña le hubiesen dicho que desconfiase de los extraños, Caperucita, acostumbrada a usar Tinder, y movida por la… ', 'images/narrador.png', 'Continua'),
+new Project('caballerosidad del gesto del lobo, eligió dialogar con él y deleitarlo con la mejor versión de sí misma. ', 'images/narrador.png', 'Continua'),
+new Project('"Le llevo a mi abuela unos snacks veganos saludables en un gesto de solidaridad". ', 'images/caperucita.png', 'Continua'),
+new Project('"¿Sabes, querida? No es seguro para una chica caminar sola por estos bosques. Déjame acompañarte." ', 'images/lobo.png', 'Continua'),
+new Project('Indignada, y también un poco confusa por la contradicción que esto suponía para sus valores difusos, Caperucita respondió:', 'images/narrador.png', 'Continua'),
+new Project('"Aunque encuentro tu comentario sexista ofensivo en extremo, lo ignoraré, ya que como minoría marginada debemos proteger tu visión…', 'images/caperucita.png', 'Continua'),
+new Project('del mundo, por mucho que atente contra los valores de nuestra sociedad. "', 'images/caperucita.png', 'Continua'),
+new Project('“Y ahora, si me disculpas, voy a seguir el camino más seguro tal como me indica Google maps.”', 'images/caperucita.png', 'Descubre el enigma')
+];
+
+// CAPÍTULO 3 PARTE 1
+
+var projects = [
+new Project('Caperucita regresó al camino principal y se dirigió hacia la casa de su abuela, confiando ciegamente en Google Maps. Sin embargo, no sabía… ', 'images/narrador.png', 'Continua'),
+new Project('que hacía mucho tiempo que los mapas de Google no se actualizaban en esa su zona, por lo que acabó tomando el camino más largo.', 'images/narrador.png', 'Continua'),
+new Project('Pero Lobo Feroz, que era muy astuto y consciente de que en el bosque no hay mejor que seguir las indicaciones de los postes para excursionistas, pudo… ', 'images/narrador.png', 'Continua'),
+new Project('llegar primero a casa de la abuelita por una ruta mucho más corta, donde tenía una misión que cumplir.', 'images/narrador.png', 'Continua'),
+new Project('Irrumpió en la casa y, aprovechando que no vio a la abuelita por ningún lugar, y que hacía bastante frío, sin verse obstaculizado por las nociones rígidas… ', 'images/narrador.png', 'Continua'),
+new Project('y tradicionalistas de los roles de género, se puso su kigurumi afelpado, justo antes de meterse en su cama. ', 'images/narrador.png', 'Continua'),
+new Project('Y justo entonces, entró Caperucita:', 'images/narrador.png', 'Continua'),
+new Project('"Abuela, te he traído algunos bocadillos libres de crueldad para agradecerte tu papel de matriarca sabia y cariñosa."', 'images/caperucita.png', 'Continua'),
+new Project('El lobo, que quería gastarle una broma, dijo suavemente:', 'images/narrador.png', 'Continua'),
+new Project('"Acércate, niña, para que pueda verte."', 'images/loboabu.png', 'Continua'),
+new Project('"¡Dios mío! ¡Abuela, qué ojos tan grandes tienes!" ', 'images/caperucita.png', 'Continua'),
+new Project('"Olvidas que tengo un grave problema óptico…"', 'images/loboabu.png', 'Continua'),
+new Project('"Y, abuela, ¡qué enorme nariz tienes!"', 'images/caperucita.png', 'Continua'),
+new Project('"Naturalmente, podría haberla disminuida quirúrgicamente para ayudar en mi carrera como actriz (que nunca se materializó, por otra parte…), pero… ', 'images/loboabu.png', 'Continua'),
+new Project('no cedí a tales presiones sociales, hija mía."', 'images/loboabu.png', 'Continua'),
+new Project('"¡Y abuela, qué dientes tan grandes y afilados tienes!" ', 'images/caperucita.png', 'Continua'),
+new Project('El Lobo que, a pesar de que se moría de ganas por sorprender a Caperucita, no pudo soportar más esos insultos específicos, en una reacción movida… ', 'images/narrador.png', 'Continua'),
+new Project('por sus más primarios instintos, saltó de la cama, agarró a Caperucita Roja y acercó la boca ferozmente a su cara.', 'images/narrador.png', 'Descubre el enigma')
+];
+
+
+// CAPÍTULO 3 FINAL BUENO
+
+var projects = [
+new Project('El Lobo estaba tan sorprendido por esta declaración que soltó rápidamente a Caperucita, quien se había dado cuenta…', 'images/narrador.png', 'Continua'),
+new Project('de que sus comentarios hacia el lobo habían sido totalmente superficiales e hirientes. ', 'images/narrador.png', 'Continua'),
+new Project('Al mismo tiempo, el leñador, a quien le había llamado la atención que el timeline de Twitter de la abuelita, de quien era gran seguidor, no se hubiese… ', 'images/narrador.png', 'Continua'),
+new Project('actualizado en las últimas horas, se sintió muy extrañado y decidió ir a ver si había algún problema. ', 'images/narrador.png', 'Continua'),
+new Project('Entró entonces en la casa y con un hacha en la mano dijo:', 'images/narrador.png', 'Continua'),
+new Project('¡¿Qué está pasando aquí?! ¿Dónde está la abuelita?', 'images/cazador.png', 'Continua'),
+new Project('Caperucita, quien acababa de tener una especie de revelación, apuntó:', 'images/narrador.png', 'Continua'),
+new Project('Hola, señor leñador. Soy consciente de que de los hombres se espera que os mostréis como individuos fuertes y empoderados, pero no es necesario… ', 'images/caperucita.png', 'Continua'),
+new Project('que blandas un hacha en todo momento. Asimismo, aprecio que muestres preocupación acerca del estado de mi abuelita, que, por cierto… ¿Dónde está? ', 'images/caperucita.png', 'Continua'),
+new Project('Ah, sí, bueno… Resulta que se ha ido a Benidorm con un viaje del IMSERSO, y como sabe que vivo en el bosque y cada vez hace más frío, me ha permitido… ', 'images/lobo.png', 'Continua'),
+new Project('quedarme en su casa mientras esté ausente… Y yo pensé que sería divertido gastarte una broma para ver si nos podríamos hacer amigos…', 'images/lobo.png', 'Continua'),
+new Project('Caperucita, llevada por su nueva visión del mundo, más empática y menos influenciada por las redes, lo cortó:', 'images/narrador.png', 'Continua'),
+new Project('Oh, lobo, ¡me encantaría tener un amigo fuera de las redes sociales y poder pasear con alguien que no sea madre de vez en cuando!', 'images/lobo.png', 'Continua'),
+new Project('A su vez, el cazador, quien se contagió del espíritu generoso de Caperucita, comentó:', 'images/narrador.png', 'Continua'),
+new Project('No era consciente de tu situación… Como no la habías publicado en internet… ¿Sabes qué podemos hacer? Vamos a avisar a la protectora… ', 'images/cazador.png', 'Continua'),
+new Project('y que te den un hogar digno, tal como nos promete a todos la Constitución. ', 'images/cazador.png', 'Continua'),
+new Project('Y así, dándose cuenta de que hay vida más allá de las redes y que a veces las mejores acciones son las que se hacen por los demás y no por mero postureo, Caperucita, el lobo…', 'images/narrador.png', 'Continua'),
+new Project('y el leñador cogieron el móvil, pero esta vez para llamar a la abuelita y hacerle saber que en su casa todo estaba bien.', 'images/narrador.png', 'Descubre el enigma')
+];
+
+
+// CAPÍTULO 3 FINAL MALO
+
+var projects = [
+new Project('El Lobo estaba tan sorprendido por esta declaración que soltó rápidamente a Caperucita. Al mismo tiempo, el leñador, a quien le había… ', 'images/narrador.png', 'Continua'),
+new Project('llamado la atención que el timeline de Twitter de la abuelita, de quien era gran seguidor, no se hubiese actualizado… ', 'images/narrador.png', 'Continua'),
+new Project('en las últimas horas, se sintió muy extrañado y decidió ir a ver si había algún problema.', 'images/narrador.png', 'Continua'),
+new Project('Entró entonces en la casa y con un hacha en la mano gritó:', 'images/narrador.png', 'Continua'),
+new Project('"¡Fuera las manos!" ', 'images/cazador.png', 'Continua'),
+new Project('"¿Qué crees que estás haciendo? ', 'images/caperucita.png', 'Continua'),
+new Project('"Si dejo que me ayudes ahora, estaría expresando una falta de confianza en mis propias habilidades, lo que daría lugar a una baja…', 'images/caperucita.png', 'Continua'),
+new Project('autoestima y puntajes de logros más bajos en los exámenes de ingreso a la universidad".', 'images/caperucita.png', 'Continua'),
+new Project('"¡Última oportunidad, niña! ¡Quita tus manos de esa especie en peligro de extinción!"', 'images/cazador.png', 'Continua'),
+new Project('Caperucita Roja hizo entonces un movimiento repentino, como si fuese un policía estadounidense, de los que disparan antes de preguntar…', 'images/narrador.png', 'Continua'),
+new Project('el leñador dio un respingo y le cortó la cabeza a Caperucita con su hacha. ', 'images/narrador.png', 'Continua'),
+new Project('"Gracias a Dios que llegaste aquí a tiempo. La abuelita me había pedido que la cubriese mientras se iba con el IMSERSO…', 'images/lobo.png', 'Continua'),
+new Project('a Benidorm, pero la mocosa no me ha dado tiempo a explicárselo entre tanto insulto. Mira que yo solo quería gastarle una broma…"', 'images/lobo.png', 'Continua'),
+new Project('"No, creo que yo soy la verdadera víctima, aquí. Nadie se preocupa por la salud mental de los hombres, y ahora tendré que actuar…', 'images/cazador.png', 'Continua'),
+new Project('como que no me afectase haber decapitado a Caperucita, por alienada que estuviese en sus acciones."', 'images/cazador.png', 'Continua'),
+new Project('"Tienes toda la razón. Siento tu dolor."', 'images/lobo.png', 'Continua'),
+new Project('Así pues, si Caperucita hubiese recapacitado y hubiese analizado fríamente todo lo que le llegaba de internet, ahora podría seguir navegando por la red.', 'images/narrador.png', 'Descubre el enigma'),
+];
+
+
+
+
+
+
+//PASSWORD
+
+<h2>*Pobre Caperucita, ¡está hecha un lío y ya no sabe qué creer! Aunque su nombre quizás le podría dar una pista… ¿Qué debería hacer?*</h2>
+
+<form action="/action_page.php">
+  <label for="fname">Ar, Caperucita, tienes que...</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" id="confirmaBtn" value="Confirma">
+</form>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 6; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+function password() {
+if ( input.value == "recapacitar") {
+
+location.replace("https://www.w3schools.com");
+} else {
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("confirmaBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+}
+
+
+
+
+//SIN MANIPULAR
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Confirma</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 6; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
