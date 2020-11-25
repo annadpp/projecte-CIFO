@@ -249,6 +249,10 @@ body {
     z-index: 15;
   }
 
+  #splash:target {
+    display: none;
+  }
+
   #splash.fade {
     display: none;
   }

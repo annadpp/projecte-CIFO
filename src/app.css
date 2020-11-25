@@ -159,6 +159,10 @@ body {
     display: none;
   }
 
+  #splash:target {
+    display: none;
+  }
+
   .grid-container {
     z-index: 4;
     position: absolute;
