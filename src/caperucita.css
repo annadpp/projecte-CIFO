@@ -107,6 +107,10 @@ body {
     color: white;
   }
 
+  .subtitle.bueno {
+    margin: 14% auto 7% auto;
+  }
+
   .article p {
     color: var(--grey);
   }
@@ -233,6 +237,10 @@ body {
   .ancho.enigma.juntos {
     border-radius: 1em;
     font-size: 0.9em;
+  }
+
+  .ancho.bueno {
+    margin-bottom: 10%;
   }
 
   #splash {
@@ -635,6 +643,71 @@ body {
   /*lectura*/
   .lectura {
     transition: opacity 0.5s ease-in-out;
+  }
+
+  /*Memory*/
+
+  .grid-memory {
+    height: 115%;
+    display: grid;
+    grid-template-rows: 1.8fr 0.2fr;
+    grid-template-areas:
+      "memory-body"
+      "memory-void";
+  }
+
+  .memory-body {
+    grid-area: memory-body;
+  }
+
+  .memory-void {
+    grid-area: memory-void;
+    opacity: 0;
+  }
+
+  .memory-game {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    box-sizing: border-box;
+  }
+
+  .memory-card {
+    width: calc(25% - 3%);
+    height: calc(33.333% - 3%);
+    margin: 1.5%;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    position: absolute;
+    background: var(--grey);
+    box-shadow: 0 0.2em 0.25em rgba(107, 107, 107, 0.5);
+    backface-visibility: hidden;
+    border-radius: 1em;
+  }
+
+  .front-face {
+    transform: rotateY(180deg);
   }
 }
 

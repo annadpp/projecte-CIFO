@@ -19,7 +19,7 @@
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left" onClick="inicio()"></div>
-        <h2>Índice</h2>
+        <h2>Final bueno</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
             <div id="bar1" class="bar"></div>
@@ -43,17 +43,167 @@
       <div class="grid-container">
         <div class="header"></div>
         <div class="subheader">
-          <img src="images/frentecap1.png" alt="" />
-          <p class="subtitle">Capítulo 1</p>
+          <p class="subtitle bueno">
+            ¡Un <em>memory</em> por encontrar el final bueno te ha tocado!
+          </p>
         </div>
         <div class="article">
-          <div class="grid-audio">
-            <div class="audio-player">
-              <audio controls>
-                <source src="horse.ogg" type="audio/ogg" />
-              </audio>
+          <div class="grid-memory">
+            <div class="memory-body">
+              <div class="memory-game">
+                <div class="memory-card" data-framework="mem-cape">
+                  <img
+                    class="front-face"
+                    src="images/mem-cape.png"
+                    alt="Caperucita"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+                <div class="memory-card" data-framework="mem-cape">
+                  <img
+                    class="front-face"
+                    src="images/mem-cape.png"
+                    alt="Caperucita"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+
+                <div class="memory-card" data-framework="mem-lobo">
+                  <img
+                    class="front-face"
+                    src="images/mem-lobo.png"
+                    alt="Lobo"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+                <div class="memory-card" data-framework="mem-lobo">
+                  <img
+                    class="front-face"
+                    src="images/mem-lobo.png"
+                    alt="Lobo"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+
+                <div class="memory-card" data-framework="mem-loab">
+                  <img
+                    class="front-face"
+                    src="images/mem-loab.png"
+                    alt="Lobo disfrazado de Abuelita"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+                <div class="memory-card" data-framework="mem-loab">
+                  <img
+                    class="front-face"
+                    src="images/mem-loab.png"
+                    alt="Lobo disfrazado de Abuelita"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+
+                <div class="memory-card" data-framework="mem-caza">
+                  <img
+                    class="front-face"
+                    src="images/mem-caza.png"
+                    alt="Cazador"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+                <div class="memory-card" data-framework="mem-caza">
+                  <img
+                    class="front-face"
+                    src="images/mem-caza.png"
+                    alt="Cazador"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+
+                <div class="memory-card" data-framework="mem-narr">
+                  <img
+                    class="front-face"
+                    src="images/mem-narr.png"
+                    alt="Narrador"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+                <div class="memory-card" data-framework="mem-narr">
+                  <img
+                    class="front-face"
+                    src="images/mem-narr.png"
+                    alt="Narrador"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+
+                <div class="memory-card" data-framework="mem-madr">
+                  <img
+                    class="front-face"
+                    src="images/mem-madr.png"
+                    alt="Madre"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+                <div class="memory-card" data-framework="mem-madr">
+                  <img
+                    class="front-face"
+                    src="images/mem-madr.png"
+                    alt="Madre"
+                  />
+                  <img
+                    class="back-face"
+                    src="images/mem-mode.png"
+                    alt="Logo La moderna Caperucita"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="audio-void"></div>
+            <div class="memory-void"></div>
+            <button id="next" class="ancho bueno">Reinicia</button>
           </div>
         </div>
       </div>
@@ -76,6 +226,69 @@
         document.getElementById("menu-bg").classList.toggle("change-bg");
         document.getElementById("sub-bg").classList.toggle("change-bg");
       }
+
+      /*Memory*/
+      let cards = document.querySelectorAll(".memory-card");
+
+      let hasFlippedCard = false;
+      let lockBoard = false;
+      let firstCard, secondCard;
+
+      function flipCard() {
+        if (lockBoard) return;
+        if (this === firstCard) return;
+
+        this.classList.add("flip");
+
+        if (!hasFlippedCard) {
+          hasFlippedCard = true;
+          firstCard = this;
+
+          return;
+        }
+
+        secondCard = this;
+        checkForMatch();
+      }
+
+      function checkForMatch() {
+        let isMatch =
+          firstCard.dataset.framework === secondCard.dataset.framework;
+
+        isMatch ? disableCards() : unflipCards();
+      }
+
+      function disableCards() {
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+
+        resetBoard();
+      }
+
+      function unflipCards() {
+        lockBoard = true;
+
+        setTimeout(() => {
+          firstCard.classList.remove("flip");
+          secondCard.classList.remove("flip");
+
+          resetBoard();
+        }, 800);
+      }
+
+      function resetBoard() {
+        [hasFlippedCard, lockBoard] = [false, false];
+        [firstCard, secondCard] = [null, null];
+      }
+
+      (function shuffle() {
+        cards.forEach((card) => {
+          let randomPos = Math.floor(Math.random() * 12);
+          card.style.order = randomPos;
+        });
+      })();
+
+      cards.forEach((card) => card.addEventListener("click", flipCard));
     </script>
   </body>
 </html>
