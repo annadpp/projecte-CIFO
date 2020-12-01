@@ -19,7 +19,7 @@
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left enigma" onClick="cap3()"></div>
-          <h2 class="enigma">Enigma 3</h2>
+          <h2 class="enigma">Enigma 2.1</h2>
         </div>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
@@ -47,12 +47,24 @@
 
       <div class="grid-container">
         <div class="subheader">
-          <img src="images/frentecap3.png" alt="" />
-          <p class="subtitle enigma">Entonces, Caperucita espetó...</p>
+          <img src="images/frentecap2a.png" alt="" />
+          <p class="enigma">
+            Pobre Caperucita, ¡está hecha un lío y ya no sabe qué creer! Aunque
+            su nombre quizás le podría dar una pista… ¿Qué debería hacer?
+          </p>
         </div>
         <div class="article enigma">
-          <a href="cap3mal.html"><button class="ancho enigma juntos">"¡Debes solicitar mi permiso antes de pasar a un nuevo nivel de intimidad!" </button></a>
-          <a href="cap3bue.html"><button class="ancho enigma juntos">"Ahora lo entiendo… ¡He estado siendo una egoísta todo este tiempo! " </button></a>
+          <form id="search-form">
+            <p class="subtitle enigma">Ar, Caperucita... Tienes que...</p>
+            <input
+              type="search"
+              placeholder="Ar, Caperucita, tienes que..."
+              class=""
+              id="input"
+              autocomplete="off"
+            />
+            <input type="submit" value="Search" class="enigma ancho" />
+          </form>
         </div>
       </div>
     </div>
@@ -63,8 +75,8 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function cap3() {
-        location.replace("cap3.html");
+      function cap2() {
+        location.replace("cap2a.html");
       }
 
       /*Menú hamburguesa*/
@@ -74,6 +86,22 @@
         document.getElementById("menu-bg").classList.toggle("change-bg");
         document.getElementById("sub-bg").classList.toggle("change-bg");
       }
+
+      /*Enigma*/
+
+      function password(event) {
+        let input = document.querySelector("#input");
+        if (input.value == "recapacitar") {
+          alert("¡Respuesta correcta!");
+          event.preventDefault();
+          location.replace("cap2b.html");
+        } else {
+          alert("¡Vuelve a probar! ¡Recapacita!");
+        }
+      }
+
+      let form = document.querySelector("#search-form");
+      form.addEventListener("submit", password);
     </script>
   </body>
 </html>

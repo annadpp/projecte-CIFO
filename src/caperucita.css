@@ -49,6 +49,30 @@ body {
     text-align: center;
   }
 
+  form input {
+    width: 100%;
+    padding: 1.1em;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 2em;
+    margin: 0.8em 0 0.2em;
+    background: var(--grey);
+    color: white;
+  }
+
+  form input::placeholder {
+    color: white;
+  }
+
+  form input:focus {
+    outline: none;
+  }
+
+  .enigma p {
+    color: white;
+    margin: 0.2em 0 0.4em 0;
+  }
+
   .arrow {
     display: inline-block;
     width: 1em;
@@ -105,6 +129,7 @@ body {
 
   .subtitle.enigma {
     color: white;
+    margin-top: 0.5em;
   }
 
   .subtitle.bueno {
@@ -237,6 +262,10 @@ body {
   .ancho.enigma.juntos {
     border-radius: 1em;
     font-size: 0.9em;
+  }
+
+  .ancho.enigma.margen {
+    margin-top: 15%;
   }
 
   .ancho.bueno {
@@ -712,6 +741,183 @@ body {
 
   .front-face {
     transform: rotateY(180deg);
+  }
+
+  /*Quiz*/
+  :root {
+    --red: #e20700;
+    --blue: #6db8cd;
+    --grey: #363329;
+    --titles: "Amatic SC", cursive;
+  }
+
+  body {
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--red);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+
+  .custom-box {
+    margin: 5% auto;
+    border-radius: 2em;
+  }
+
+  .custom-box::before,
+  .custom-box::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .custom-box.hide {
+    display: none;
+  }
+
+  .quiz-box .btn,
+  .result-box .btn {
+    background: white;
+    border: 0.2em solid white;
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    color: var(--blue);
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1.5vh auto 0 auto;
+    padding: 0.7em;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .quiz-box .question-number,
+  .quiz-box .question-text,
+  .quiz-box .option-container,
+  .quiz-box .next-question-btn,
+  .quiz-box .answers-indicator {
+    width: 100%;
+    float: left;
+  }
+
+  .quiz-box .question-text {
+    margin: 0 0 2vh 0;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+  }
+
+  .quiz-box .option-container {
+    margin: 1vh 0 0 0;
+  }
+
+  .quiz-box .option-container .option {
+    background-color: var(--grey);
+    padding: 3% 6%;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 1em;
+    margin-bottom: 1.5vh;
+    color: white;
+    opacity: 0;
+    box-shadow: 0.1em 0.1em 0.3em grey;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quiz-box .option-container .option.already-answered {
+    pointer-events: none;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .quiz-box .option-container .option.correct::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--blue);
+    z-index: -1;
+  }
+
+  .quiz-box .option-container .option.wrong::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--red);
+    z-index: -1;
+  }
+
+  .quiz-box .btn {
+    margin: 0.8em 0 1em 0;
+  }
+
+  .quiz-box .answers-indicator {
+    border-top: 0.1em solid black;
+  }
+
+  .quiz-box .answers-indicator div {
+    height: 2em;
+    width: 2em;
+    display: inline-block;
+    background-color: grey;
+    border-radius: 50%;
+    margin-top: 1em;
+  }
+
+  .result-box {
+    text-align: center;
+  }
+
+  .result-box.hide {
+    display: none;
+  }
+
+  .result-box h1 {
+    text-align: center;
+  }
+
+  .result-box p {
+    margin: 2em;
+    font-weight: bold;
+  }
+
+  .result-box .btn {
+    text-align: center;
+    margin: 0 0.5em;
+  }
+
+  img.image-end {
+    width: 100%;
+    margin: 1vh 0 3vh 0;
+    position: relative;
+    margin-top: -60%;
+  }
+
+  p.final-quiz {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 10% 0;
   }
 }
 
