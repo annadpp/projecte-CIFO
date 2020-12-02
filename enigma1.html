@@ -18,7 +18,7 @@
   <body class="enigma">
     <div class="content" id="content">
       <header class="app-header">
-        <div class="arrow arrow-left enigma" onClick="cap3()"></div>
+        <div class="arrow arrow-left enigma" onClick="cap1()"></div>
           <h2 class="enigma">Enigma 2.1</h2>
         </div>
         <div id="menu-bar">
@@ -49,22 +49,33 @@
         <div class="subheader">
           <img src="images/frentecap2a.png" alt="" />
           <p class="enigma">
-            Pobre Caperucita, ¡está hecha un lío y ya no sabe qué creer! Aunque
-            su nombre quizás le podría dar una pista… ¿Qué debería hacer?
+            Así, antes de salir, cogió el móvil y... 
           </p>
         </div>
         <div class="article enigma">
-          <form id="search-form">
-            <p class="subtitle enigma">Ar, Caperucita... Tienes que...</p>
-            <input
-              type="search"
-              placeholder="Escribe aquí la solución"
-              class=""
-              id="input"
-              autocomplete="off"
-            />
-            <input type="submit" value="¡Desentraña el misterio!" class="enigma ancho" />
-          </form>
+          <div class="carousel">
+    <div class="carousel-inner">
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel-item" >
+            <img class="spotify" src="images/spotify.jpg" onClick="spotify()">
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+            <img class="whatsapp" src="images/whatsapp.jpg" onClick="whatsApp()">
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+            <img class="story" src="images/story.jpg" onClick="story()">
+        </div>
+        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+        <label for="carousel-2" class="carousel-control next control-1">›</label>
+        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+        <label for="carousel-3" class="carousel-control next control-2">›</label>
+        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+        <label for="carousel-1" class="carousel-control next control-3">›</label>
+    </div>
+</div>
+            <input type="submit" id="slider" value="¡Sigue la historia!" class="enigma ancho" onClick="cap2a()"/>
         </div>
       </div>
     </div>
@@ -75,7 +86,11 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function cap2() {
+      function cap1() {
+        location.replace("cap1.html");
+      }
+
+      function cap2a() {
         location.replace("cap2a.html");
       }
 
@@ -87,21 +102,29 @@
         document.getElementById("sub-bg").classList.toggle("change-bg");
       }
 
-      /*Enigma*/
+      /*Slider*/
 
-      function password(event) {
-        let input = document.querySelector("#input");
-        if (input.value == "recapacitar") {
-          alert("¡Respuesta correcta!");
-          event.preventDefault();
-          location.replace("cap2b.html");
-        } else {
-          alert("¡Vuelve a probar! ¡Recapacita!");
-        }
+  function spotify() {
+        document.querySelector(".spotify").src =
+          "images/carrouselmal.jpg";
+          document.querySelector(".spotify").style.border = "none";
       }
 
-      let form = document.querySelector("#search-form");
-      form.addEventListener("submit", password);
+function whatsApp() {
+        document.querySelector(".whatsapp").src =
+          "images/carrouselmal.jpg";
+          document.querySelector(".whatsapp").style.border = "none";
+      }
+
+function story() {
+        document.querySelector(".story").src =
+          "images/carrouselbien.jpg";
+          document.querySelector(".story").style.border = "none";
+          document.querySelector("#slider").classList.add("show");
+          
+      }     
+
+      
     </script>
   </body>
 </html>

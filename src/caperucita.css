@@ -352,7 +352,7 @@ body {
     grid-area: charac;
     border-radius: 1em;
     width: 100%;
-    background: var(--grey);
+    background: white;
   }
 
   .charac img {
@@ -797,6 +797,10 @@ body {
     width: 100%;
   }
 
+  button.btn {
+    margin: 0;
+  }
+
   .quiz-box .question-number,
   .quiz-box .question-text,
   .quiz-box .option-container,
@@ -871,19 +875,6 @@ body {
     margin: 0.8em 0 1em 0;
   }
 
-  .quiz-box .answers-indicator {
-    border-top: 0.1em solid black;
-  }
-
-  .quiz-box .answers-indicator div {
-    height: 2em;
-    width: 2em;
-    display: inline-block;
-    background-color: grey;
-    border-radius: 50%;
-    margin-top: 1em;
-  }
-
   .result-box {
     text-align: center;
   }
@@ -901,11 +892,6 @@ body {
     font-weight: bold;
   }
 
-  .result-box .btn {
-    text-align: center;
-    margin: 0 0.5em;
-  }
-
   img.image-end {
     width: 100%;
     margin: 1vh 0 3vh 0;
@@ -919,6 +905,91 @@ body {
     font-weight: bold;
     margin: 0 0 10% 0;
   }
+
+  /*Carousel*/
+.carousel {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  border-radius: 5em;
+  margin-top: 3vh;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 30vh;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  border-radius: 1em;
+  height: 30vh;
+
+  }
+
+.carousel-item img {
+  display: block;
+  border-radius: 1em;
+  height: 30vh;
+  background: var(--grey);
+  border: 0.2em solid var(--blue);
+  margin: 0 auto;
+}
+
+.carousel-control {
+  color: var(--grey);
+  cursor: pointer;
+  display: none;
+  font-size: 3em;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+
+#slider {
+display: none;
+}
+
+#slider.show {
+display: block;
 }
 
 @media (min-width: 786px) {

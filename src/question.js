@@ -26,7 +26,8 @@ const quiz = [
     answer: 0,
   },
   {
-    question: "¿Son los bloggers de viajes principales perjudicados por 2020?",
+    question:
+      "¿Son los bloggers de viajes los principales perjudicados por 2020?",
     options: ["Verdadero", "Falso", "A mí que me registren"],
     answer: 1,
   },
