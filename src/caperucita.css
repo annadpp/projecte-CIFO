@@ -405,7 +405,7 @@ body {
 
   .grid-button {
     display: grid;
-    height: 100%;
+    height: 30vh;
     grid-template-columns: 1.6fr 0.4fr;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 5%;
@@ -447,26 +447,13 @@ body {
   }
 
   .grid-button .item-cap {
-    display: flex;
-    align-items: center;
     border-radius: 1em;
     border: 0.2em solid var(--red);
     z-index: 5;
     box-shadow: 0.1em 0.1em 0.3em grey;
     color: white;
     cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: 38%;
-    background-position: left;
-  }
-
-  .item-cap div {
-    margin-left: 45%;
-  }
-
-  .item-cap a {
-    color: white;
-    text-decoration: none;
+    height: 10vh;
   }
 
   .grid-button .item-cap:hover {
@@ -477,20 +464,28 @@ body {
     background-position: left;
   }
 
+  .item-cap-left {
+    display: inline;
+  }
+
+  .item-cap-right {
+    display: inline;
+    position: absolute;
+    padding-top: 3.2vh;
+  }
+
   .grid-button .item-cap img {
-    width: 25%;
-    margin: 0 1em 0 0.5em;
+    width: 9vh;
+    display: inline-block;
+    margin-right: 8vw;
+    border-radius: 100%;
   }
 
   .grid-button .item-cap p {
-    margin: 0.3em 0;
-    font-size: 0.9em;
-    color: var(--grey);
-  }
-
-  .grid-button .item-cap p strong {
-    font-size: 1.1em;
+    font-size: 4.5vw;
     color: white;
+    text-align: right;
+    display: inline-block;
   }
 
   .grid-button .item-log {
@@ -907,89 +902,88 @@ body {
   }
 
   /*Carousel*/
-.carousel {
-  width: 100%;
-  height: 30vh;
-  position: relative;
-  border-radius: 5em;
-  margin-top: 3vh;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 30vh;
-}
-
-.carousel-open:checked + .carousel-item {
-  position: static;
-  opacity: 100;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.carousel-item {
-  position: absolute;
-  opacity: 0;
-  border-radius: 1em;
-  height: 30vh;
-
+  .carousel {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    border-radius: 5em;
+    margin-top: 3vh;
   }
 
-.carousel-item img {
-  display: block;
-  border-radius: 1em;
-  height: 30vh;
-  background: var(--grey);
-  border: 0.2em solid var(--blue);
-  margin: 0 auto;
-}
+  .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30vh;
+  }
 
-.carousel-control {
-  color: var(--grey);
-  cursor: pointer;
-  display: none;
-  font-size: 3em;
-  height: 40px;
-  line-height: 35px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  cursor: pointer;
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  text-align: center;
-  width: 40px;
-  z-index: 10;
-}
+  .carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+    width: 60%;
+    margin: 0 auto;
+  }
 
-.carousel-control.prev {
-  left: 2%;
-}
+  .carousel-item {
+    position: absolute;
+    opacity: 0;
+    border-radius: 1em;
+    height: 30vh;
+  }
 
-.carousel-control.next {
-  right: 2%;
-}
+  .carousel-item img {
+    display: block;
+    border-radius: 1em;
+    height: 30vh;
+    background: var(--grey);
+    border: 0.2em solid var(--blue);
+    margin: 0 auto;
+  }
 
-.carousel-control:hover {
-  background: rgba(0, 0, 0, 0.8);
-  color: #aaaaaa;
-}
+  .carousel-control {
+    color: var(--grey);
+    cursor: pointer;
+    display: none;
+    font-size: 3em;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
 
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
-  display: block;
-}
+  .carousel-control.prev {
+    left: 2%;
+  }
 
+  .carousel-control.next {
+    right: 2%;
+  }
 
-#slider {
-display: none;
-}
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+  }
 
-#slider.show {
-display: block;
+  #carousel-1:checked ~ .control-1,
+  #carousel-2:checked ~ .control-2,
+  #carousel-3:checked ~ .control-3 {
+    display: block;
+  }
+
+  #slider {
+    display: none;
+  }
+
+  #slider.show {
+    display: block;
+  }
 }
 
 @media (min-width: 786px) {

@@ -77,7 +77,7 @@ body {
     font-family: var(--titles);
     font-size: 1.2em;
     line-height: 0.9em;
-    padding: 0.5em;
+    padding: 1em;
   }
 
   .content {
@@ -210,7 +210,7 @@ body {
     gap: 5%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 100%;
+    height: 30vh;
     margin-bottom: 5%;
     grid-template-areas:
       "book1"
@@ -244,6 +244,7 @@ body {
     border-radius: 1em;
     box-shadow: 0.1em 0.1em 0.3em grey;
     width: 100%;
+    height: 10vh;
   }
 
   .book-item:hover {
@@ -251,148 +252,163 @@ body {
     border: 0.2em solid var(--palepink);
   }
 
-  .book-item img {
-    width: 10%;
-  }
-
   .book-item p {
-    float: right;
-    font-size: 1.2em;
-    margin-bottom: 5%;
-  }
-
-  /*Menú hamburguesa <- REPASAR*/
-
-  #menu {
-    cursor: pointer;
-    float: right;
-    height: 1.4em;
-    margin: 9% 2em 0 0;
-    width: 1.5em;
-  }
-
-  .bar {
-    background-color: white;
-    display: block;
-    height: 0.2em;
-    transition: 0.3s ease;
-    width: 100%;
-  }
-
-  #bar1 {
-    transform: translateY(-0.3em);
-  }
-
-  #bar3 {
-    transform: translateY(0.3em);
-  }
-
-  .change .bar {
-    background-color: var(--grey);
-  }
-
-  .change #bar1 {
-    transform: translateY(0.22em) rotate(-45deg);
-  }
-
-  .change #bar3 {
-    transform: translateY(-0.19em) rotate(45deg);
-  }
-
-  .change #bar2 {
-    opacity: 0;
-  }
-
-  .nav li a {
-    color: var(--grey);
-    font-weight: bold;
-    font-size: 1.3em;
-    text-decoration: none;
-  }
-
-  .nav li a:hover {
-    color: var(--palepink);
-    font-weight: bold;
-  }
-
-  .nav a:before {
-    content: url("../images/linea.png");
-    width: 2em;
-  }
-
-  .nav a:hover:before {
-    content: url("../images/linearosa.png");
-    width: 2em;
-  }
-
-  .nav li {
-    list-style: none;
-    margin-left: 17%;
-    padding: 1em 0;
-    text-align: center;
-  }
-
-  .nav {
-    display: none;
-    margin: 45% 10% 0 0;
+    font-size: 3vh;
+    text-align: right;
+    display: inline-block;
     padding: 0;
-    transition: 0.5s ease;
-    width: 90%;
+    color: var(--grey);
   }
 
-  .desplega {
-    display: none;
-    margin: 90% 0 30% 15%;
+  .book-item img {
+    width: 9vh;
+    display: inline-block;
+    border-radius: 100%;
+  }
+
+  .book-left {
+    display: inline;
+  }
+
+  .book-right {
+    display: inline;
     position: absolute;
-    top: 0;
-    transition: 0.5s ease;
-    width: 58%;
+    padding-top: 3.5vh;
+    right: 4vw;
   }
+}
 
-  .desplega img {
-    width: 65%;
-  }
+/*Menú hamburguesa <- REPASAR*/
 
-  .desplega p {
-    font-family: var(--titles);
-    font-size: 1em;
-    line-height: 0.8em;
-    margin: 5% 0 0 40%;
-    text-align: left;
-    width: 60%;
-  }
+#menu {
+  cursor: pointer;
+  float: right;
+  height: 1.4em;
+  margin: 9% 2em 0 0;
+  width: 1.5em;
+}
 
-  .change {
-    display: block;
-    transition: 0.3s ease;
-  }
+.bar {
+  background-color: white;
+  display: block;
+  height: 0.2em;
+  transition: 0.3s ease;
+  width: 100%;
+}
 
-  .menu-bg {
-    background: white;
-    border-radius: 5em 0 0 0;
-    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
-    height: 0;
-    transition: 0.1s ease;
-    width: 0;
-    z-index: 9;
-  }
+#bar1 {
+  transform: translateY(-0.3em);
+}
 
-  .change-bg {
-    height: 100%;
-    width: 100%;
-  }
+#bar3 {
+  transform: translateY(0.3em);
+}
 
-  .menu-bg,
-  #menu-bar {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+.change .bar {
+  background-color: var(--grey);
+}
 
-  #menu-bar {
-    width: 100%;
-    z-index: 10;
-  }
+.change #bar1 {
+  transform: translateY(0.22em) rotate(-45deg);
+}
+
+.change #bar3 {
+  transform: translateY(-0.19em) rotate(45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.nav li a {
+  color: var(--grey);
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  color: var(--palepink);
+  font-weight: bold;
+}
+
+.nav a:before {
+  content: url("../images/linea.png");
+  width: 2em;
+}
+
+.nav a:hover:before {
+  content: url("../images/linearosa.png");
+  width: 2em;
+}
+
+.nav li {
+  list-style: none;
+  margin-left: 17%;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.nav {
+  display: none;
+  margin: 45% 10% 0 0;
+  padding: 0;
+  transition: 0.5s ease;
+  width: 90%;
+}
+
+.desplega {
+  display: none;
+  margin: 90% 0 30% 15%;
+  position: absolute;
+  top: 0;
+  transition: 0.5s ease;
+  width: 58%;
+}
+
+.desplega img {
+  width: 65%;
+}
+
+.desplega p {
+  font-family: var(--titles);
+  font-size: 1em;
+  line-height: 0.8em;
+  margin: 5% 0 0 40%;
+  text-align: left;
+  width: 60%;
+}
+
+.change {
+  display: block;
+  transition: 0.3s ease;
+}
+
+.menu-bg {
+  background: white;
+  border-radius: 5em 0 0 0;
+  box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
+  height: 0;
+  transition: 0.1s ease;
+  width: 0;
+  z-index: 9;
+}
+
+.change-bg {
+  height: 100%;
+  width: 100%;
+}
+
+.menu-bg,
+#menu-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#menu-bar {
+  width: 100%;
+  z-index: 10;
 }
 
 @media (min-width: 786px) {
