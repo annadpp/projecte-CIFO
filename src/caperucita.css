@@ -451,9 +451,9 @@ body {
     border: 0.2em solid var(--red);
     z-index: 5;
     box-shadow: 0.1em 0.1em 0.3em grey;
-    color: white;
     cursor: pointer;
     height: 10vh;
+    color: white;
   }
 
   .grid-button .item-cap:hover {
@@ -472,6 +472,7 @@ body {
     display: inline;
     position: absolute;
     padding-top: 3.2vh;
+    font-size: 4.5vw;
   }
 
   .grid-button .item-cap img {
@@ -482,14 +483,8 @@ body {
   }
 
   .grid-button .item-cap p {
-    font-size: 4.5vw;
-    color: white;
     text-align: right;
     display: inline-block;
-  }
-
-  .grid-button .item-cap p strong:hover {
-    color: var(--red);
   }
 
   .grid-button .item-log {
