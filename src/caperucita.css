@@ -461,6 +461,7 @@ body {
     background-repeat: no-repeat;
     background-size: 38%;
     background-position: left;
+    color: var(--red);
   }
 
   .item-cap-left {
