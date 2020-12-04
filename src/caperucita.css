@@ -487,7 +487,7 @@ body {
     display: inline-block;
   }
 
-  .grid-button .item-cap p:hover {
+  .grid-button .item-cap p strong:hover {
     color: var(--red);
   }
 
