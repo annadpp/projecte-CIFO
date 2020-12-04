@@ -458,7 +458,6 @@ body {
 
   .grid-button .item-cap:hover {
     background: white;
-    color: var(--red);
     background-repeat: no-repeat;
     background-size: 38%;
     background-position: left;
@@ -486,6 +485,10 @@ body {
     color: white;
     text-align: right;
     display: inline-block;
+  }
+
+  .grid-button .item-cap p:hover {
+    color: var(--red);
   }
 
   .grid-button .item-log {
