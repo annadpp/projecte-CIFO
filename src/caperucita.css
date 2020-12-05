@@ -374,7 +374,7 @@ body {
   }
 
   .grid-story {
-    height: 70%;
+    height: 25vh;
     display: grid;
     grid-template-columns: 0.4fr 1.6fr;
     grid-template-rows: 0.8fr 1.2fr;
@@ -386,7 +386,7 @@ body {
   .word {
     grid-area: word;
     color: var(--grey);
-    font-size: 2.6vh;
+    font-size: 4.7vw;
   }
 
   .charac {
@@ -404,6 +404,7 @@ body {
 
   .charac img {
     width: 100%;
+    border-radius: 100%;
   }
 
   .void {
