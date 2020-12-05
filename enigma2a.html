@@ -34,56 +34,62 @@
       </div>
     </div>
 
-    <!--contenido móvil-->
-    <div class="content" id="content">
-      <header class="app-header">
-        <div class="arrow arrow-left enigma" onClick="cap2()"></div>
+    <!--dispositivos móviles-->
+    <div class="mobile">
+      <div class="content" id="content">
+        <header class="app-header">
+          <div class="arrow arrow-left enigma" onClick="cap2a()"></div>
           <h2 class="enigma">Enigma 2.1</h2>
-        </div>
-        <div id="menu-bar">
-          <div id="menu" onClick="onClickMenu()">
-            <div id="bar1" class="bar enigma"></div>
-            <div id="bar2" class="bar enigma"></div>
-            <div id="bar3" class="bar enigma"></div>
+          <div id="menu-bar">
+            <div id="menu" onClick="onClickMenu()">
+              <div id="bar1" class="bar enigma"></div>
+              <div id="bar2" class="bar enigma"></div>
+              <div id="bar3" class="bar enigma"></div>
+            </div>
+            <ul class="nav" id="nav">
+              <li><a href="index.html">Biblioteca</a></li>
+              <li><a href="#">Cómo leer</a></li>
+              <li><a href="indice.html">Índice</a></li>
+              <li><img src="images/frentecap.png" alt="" /></li>
+              <li>
+                <p>LA MODERNA<br />CAPERUCITA</p>
+              </li>
+            </ul>
           </div>
-          <ul class="nav" id="nav">
-            <li><a href="index.html">Biblioteca</a></li>
-            <li><a href="#">Cómo leer</a></li>
-            <li><a href="caperucita.html">Índice</a></li>
-            <li><img src="images/frentecap.png" alt="" /></li>
-            <li>
-              <p>LA MODERNA<br />CAPERUCITA</p>
-            </li>
-          </ul>
-        </div>
 
-        <div class="sub-bg" id="sub-bg">
-          <div class="menu-bg" id="menu-bg"></div>
-        </div>
-      </header>
+          <div class="sub-bg" id="sub-bg">
+            <div class="menu-bg" id="menu-bg"></div>
+          </div>
+        </header>
 
-      <div class="middle enigma"></div>
+        <div class="middle enigma"></div>
 
-      <div class="grid-container">
-        <div class="subheader">
-          <img src="images/frentecap2a.png" alt="" />
-          <p class="enigma">
-            Pobre Caperucita, ¡está hecha un lío y ya no sabe qué creer! Aunque
-            su nombre quizás le podría dar una pista… ¿Qué debería hacer?
-          </p>
-        </div>
-        <div class="article enigma">
-          <form id="search-form">
-            <p class="subtitle enigma">Ar, Caperucita... Tienes que...</p>
-            <input
-              type="search"
-              placeholder="Escribe aquí la solución"
-              class=""
-              id="input"
-              autocomplete="off"
-            />
-            <input type="submit" value="¡Desentraña el misterio!" class="enigma ancho" />
-          </form>
+        <div class="grid-container">
+          <div class="subheader">
+            <img src="images/frentecap2a.png" alt="" />
+            <p class="enigma">
+              Pobre Caperucita, ¡está hecha un lío y ya no sabe qué creer!
+              Aunque su nombre quizás le podría dar una pista… ¿Qué debería
+              hacer?
+            </p>
+          </div>
+          <div class="article enigma">
+            <form id="search-form">
+              <p class="subtitle enigma">Ar, Caperucita... Tienes que...</p>
+              <input
+                type="search"
+                placeholder="Escribe aquí la solución"
+                class=""
+                id="input"
+                autocomplete="off"
+              />
+              <input
+                type="submit"
+                value="¡Desentraña el misterio!"
+                class="enigma ancho"
+              />
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -94,7 +100,7 @@
         document.getElementById("splash").classList.toggle("fade");
       }
 
-      function cap2() {
+      function cap2a() {
         location.replace("cap2a.html");
       }
 
