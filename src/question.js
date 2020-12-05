@@ -3,7 +3,7 @@
 const quiz = [
   {
     question: "¿Dónde juega Caperucita a una versión moderna de Pokémon?",
-    options: ["En el bosque", "En Tinder", "En su Game Boy, como toda la vida"],
+    options: ["En el bosque", "En Tinder", "En su Game Boy, obvio"],
     answer: 1,
   },
   {
@@ -27,7 +27,7 @@ const quiz = [
   },
   {
     question:
-      "¿Son los bloggers de viajes los principales perjudicados por 2020?",
+      "¿Son los <em>bloggers</em> de viajes los principales perjudicados por 2020?",
     options: ["Verdadero", "Falso", "A mí que me registren"],
     answer: 1,
   },

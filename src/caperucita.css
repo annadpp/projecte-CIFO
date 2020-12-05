@@ -758,6 +758,10 @@ body {
   }
 
   /*Quiz*/
+  .quiz {
+    height: 50vh;
+  }
+
   .custom-box {
     margin: 5% auto;
     border-radius: 2em;
@@ -882,7 +886,8 @@ body {
   }
 
   .result-box p {
-    margin: 2em;
+    margin: 2vh 0 6vh 0;
+    font-size: 6vw;
     font-weight: bold;
   }
 
