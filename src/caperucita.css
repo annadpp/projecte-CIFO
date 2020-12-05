@@ -362,6 +362,12 @@ body {
     margin-top: 5%;
   }
 
+  .subheader.carousel img {
+    width: 90%;
+    margin-left: 5vw;
+    margin-top: -2vh;
+  }
+
   .article {
     grid-area: article;
     padding-bottom: 5%;
@@ -1048,10 +1054,6 @@ body {
 
   #slider.show {
     display: block;
-  }
-
-  #slider.enigma.ancho.show {
-    margin-top: -1vh;
   }
 }
 
