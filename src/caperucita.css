@@ -800,6 +800,10 @@ body {
     margin: 0;
   }
 
+  .home-box p {
+    margin: 0 0 10vh 0;
+  }
+
   .quiz-box .question-number,
   .quiz-box .question-text,
   .quiz-box .option-container,
@@ -811,7 +815,7 @@ body {
 
   .quiz-box .question-text {
     margin: 0 0 2vh 0;
-    font-size: 2vh;
+    font-size: 4vw;
     color: white;
     font-weight: bold;
   }
