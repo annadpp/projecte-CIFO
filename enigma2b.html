@@ -16,11 +16,29 @@
     <title>La moderna Caperucita</title>
   </head>
   <body class="enigma">
+    <!--tamaños grandes-->
+    <div class="container-grande">
+      <div class="contenido-grande">
+        <div class="titulo">
+          <img src="images/cap1.png" alt="" />
+          <h1>La moderna <br />Caperucita</h1>
+        </div>
+        <div class="img"><img src="images/qr-codeOK.jpg" alt="" /></div>
+        <div class="texto">
+          <p>
+            Esta web está preparada únicamente para dispositivos móviles. Abre
+            la web con tu móvil o escanea el código QR para acceder a su
+            contenido.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--contenido móvil-->
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left enigma" onClick="cap2b()"></div>
-          <h2 class="enigma">Enigma 2.2</h2>
-        </div>
+        <h2 class="enigma">Enigma 3</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
             <div id="bar1" class="bar enigma"></div>
@@ -51,33 +69,37 @@
         </div>
         <div class="article enigma">
           <div class="home-box custom-box">
-      <p class="subtitle enigma">
-        Ahora que has pasado un tiempo con Caperucita, ¡veamos si has
-        asimilado algunos conceptos básicos!
-      </p>
-      <button type="button" class="ancho enigma margen" onClick="startQuiz()">
-        Empieza
-      </button>
-    </div>
+            <p class="subtitle enigma">
+              Ahora que has pasado un tiempo con Caperucita, ¡veamos si has
+              asimilado algunos conceptos básicos!
+            </p>
+            <button
+              type="button"
+              class="ancho enigma margen"
+              onClick="startQuiz()"
+            >
+              Empieza
+            </button>
+          </div>
 
-    <div class="quiz-box custom-box hide">
-      <div class="question-text"></div>
-      <div class="option-container"></div>
-      <div class="next-question-btn">
-        <button type="" class="btn" onClick="next()">Siguiente</button>
-      </div>
-    </div>
+          <div class="quiz-box custom-box hide">
+            <div class="question-text"></div>
+            <div class="option-container"></div>
+            <div class="next-question-btn">
+              <button type="" class="btn" onClick="next()">Siguiente</button>
+            </div>
+          </div>
 
-    <div class="result-box custom-box hide">
-      <img class="image-end" src="" alt="" />
-      <p class="subtitle enigma">
-        Has acertado <span class="total-score"></span> preguntas
-      </p>
-      
-      <button type="button" class="btn" onClick="btnEnd()">
-        Vuelve a intentarlo
-      </button>
-    </div>
+          <div class="result-box custom-box hide">
+            <img class="image-end" src="" alt="" />
+            <p class="subtitle enigma">
+              Has acertado <span class="total-score"></span> preguntas
+            </p>
+
+            <button type="button" class="btn" onClick="btnEnd()">
+              Vuelve a intentarlo
+            </button>
+          </div>
         </div>
       </div>
     </div>

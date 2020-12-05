@@ -20,7 +20,11 @@ body {
   padding: 0;
 }
 
-@media (min-width: 200px) {
+@media (max-width: 480px) {
+  .container-grande {
+    display: none;
+  }
+
   a {
     color: var(--grey);
     text-decoration: none;
@@ -276,140 +280,201 @@ body {
     padding-top: 3.5vh;
     right: 4vw;
   }
+
+  /*Menú hamburguesa <- REPASAR*/
+
+  #menu {
+    cursor: pointer;
+    float: right;
+    height: 1.4em;
+    margin: 9% 2em 0 0;
+    width: 1.5em;
+  }
+
+  .bar {
+    background-color: white;
+    display: block;
+    height: 0.2em;
+    transition: 0.3s ease;
+    width: 100%;
+  }
+
+  #bar1 {
+    transform: translateY(-0.3em);
+  }
+
+  #bar3 {
+    transform: translateY(0.3em);
+  }
+
+  .change .bar {
+    background-color: var(--grey);
+  }
+
+  .change #bar1 {
+    transform: translateY(0.22em) rotate(-45deg);
+  }
+
+  .change #bar3 {
+    transform: translateY(-0.19em) rotate(45deg);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .nav li a {
+    color: var(--grey);
+    font-weight: bold;
+    font-size: 1.3em;
+    text-decoration: none;
+  }
+
+  .nav li a:hover {
+    color: var(--palepink);
+    font-weight: bold;
+  }
+
+  .nav a:before {
+    content: url("../images/linea.png");
+    width: 2em;
+  }
+
+  .nav a:hover:before {
+    content: url("../images/linearosa.png");
+    width: 2em;
+  }
+
+  .nav li {
+    list-style: none;
+    margin-left: 17%;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  .nav {
+    display: none;
+    margin: 45% 10% 0 0;
+    padding: 0;
+    transition: 0.5s ease;
+    width: 90%;
+  }
+
+  .desplega {
+    display: none;
+    margin: 90% 0 30% 15%;
+    position: absolute;
+    top: 0;
+    transition: 0.5s ease;
+    width: 58%;
+  }
+
+  .desplega img {
+    width: 65%;
+  }
+
+  .desplega p {
+    font-family: var(--titles);
+    font-size: 1em;
+    line-height: 0.8em;
+    margin: 5% 0 0 40%;
+    text-align: left;
+    width: 60%;
+  }
+
+  .change {
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .menu-bg {
+    background: white;
+    border-radius: 5em 0 0 0;
+    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
+    height: 0;
+    transition: 0.1s ease;
+    width: 0;
+    z-index: 9;
+  }
+
+  .change-bg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu-bg,
+  #menu-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  #menu-bar {
+    width: 100%;
+    z-index: 10;
+  }
 }
 
-/*Menú hamburguesa <- REPASAR*/
+@media only screen and (min-width: 481px) {
+  .container-grande {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
 
-#menu {
-  cursor: pointer;
-  float: right;
-  height: 1.4em;
-  margin: 9% 2em 0 0;
-  width: 1.5em;
-}
+  .contenido-grande {
+    background: white;
+    margin: 0 auto;
+    padding: 5vh 0 10vh 0;
+    height: 80vh;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+  }
 
-.bar {
-  background-color: white;
-  display: block;
-  height: 0.2em;
-  transition: 0.3s ease;
-  width: 100%;
-}
+  .contenido-grande h1 {
+    font-family: var(--titles);
+    line-height: 8.5vh;
+    color: var(--grey);
+    font-size: 5.8vw;
+    text-align: left;
+    display: inline;
+    float: right;
+    margin: 5vh 0 0 0;
+  }
 
-#bar1 {
-  transform: translateY(-0.3em);
-}
+  .contenido-grande p {
+    width: 55vw;
+    padding: 0 15vh 8vh 15vh;
+    color: var(--grey);
+    font-size: 2vh;
+    font-weight: bold;
+    margin-top: -10vh;
+  }
 
-#bar3 {
-  transform: translateY(0.3em);
-}
+  div.titulo {
+    display: inline;
+    margin: -8vh auto 0 auto;
+    width: 40vw;
+    float: left;
+  }
 
-.change .bar {
-  background-color: var(--grey);
-}
+  div.titulo img {
+    margin: 2vh 0 0 0;
+    width: 15vw;
+  }
 
-.change #bar1 {
-  transform: translateY(0.22em) rotate(-45deg);
-}
-
-.change #bar3 {
-  transform: translateY(-0.19em) rotate(45deg);
-}
-
-.change #bar2 {
-  opacity: 0;
-}
-
-.nav li a {
-  color: var(--grey);
-  font-weight: bold;
-  font-size: 1.3em;
-  text-decoration: none;
-}
-
-.nav li a:hover {
-  color: var(--palepink);
-  font-weight: bold;
-}
-
-.nav a:before {
-  content: url("../images/linea.png");
-  width: 2em;
-}
-
-.nav a:hover:before {
-  content: url("../images/linearosa.png");
-  width: 2em;
-}
-
-.nav li {
-  list-style: none;
-  margin-left: 17%;
-  padding: 1em 0;
-  text-align: center;
-}
-
-.nav {
-  display: none;
-  margin: 45% 10% 0 0;
-  padding: 0;
-  transition: 0.5s ease;
-  width: 90%;
-}
-
-.desplega {
-  display: none;
-  margin: 90% 0 30% 15%;
-  position: absolute;
-  top: 0;
-  transition: 0.5s ease;
-  width: 58%;
-}
-
-.desplega img {
-  width: 65%;
-}
-
-.desplega p {
-  font-family: var(--titles);
-  font-size: 1em;
-  line-height: 0.8em;
-  margin: 5% 0 0 40%;
-  text-align: left;
-  width: 60%;
-}
-
-.change {
-  display: block;
-  transition: 0.3s ease;
-}
-
-.menu-bg {
-  background: white;
-  border-radius: 5em 0 0 0;
-  box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
-  height: 0;
-  transition: 0.1s ease;
-  width: 0;
-  z-index: 9;
-}
-
-.change-bg {
-  height: 100%;
-  width: 100%;
-}
-
-.menu-bg,
-#menu-bar {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#menu-bar {
-  width: 100%;
-  z-index: 10;
-}
-
-@media (min-width: 786px) {
+  div.img img {
+    border-radius: 2em;
+    margin: 12vh 8vw 0 0;
+    box-shadow: 0.2em 0.2em 0.3em grey;
+    padding: 7vh 3vw;
+    width: 20vw;
+    z-index: 1;
+  }
 }

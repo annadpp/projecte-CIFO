@@ -20,9 +20,13 @@ body {
   padding: 0;
 }
 
-@media (min-width: 200px) {
+@media (max-width: 480px) {
+  .container-grande {
+    display: none;
+  }
+
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
   }
@@ -37,7 +41,7 @@ body {
 
   h2 {
     font-size: 130%;
-    margin: 7% auto 0 auto;
+    margin: 4vh auto 0 auto;
     color: white;
     text-align: center;
   }
@@ -45,7 +49,7 @@ body {
   h2.enigma {
     color: var(--grey);
     font-size: 130%;
-    margin: 7% auto 0 auto;
+    margin: 4vh auto 0 auto;
     text-align: center;
   }
 
@@ -516,7 +520,7 @@ body {
   #menu {
     width: 1.5em;
     height: 1.4em;
-    margin: 9% 2em 0 0;
+    margin: 5vh 2em 0 0;
     cursor: pointer;
     float: right;
   }
@@ -983,7 +987,106 @@ body {
   #slider.show {
     display: block;
   }
+
+  /*Tooltip*/
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0.15em dotted var(--blue);
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 50vw;
+    background-color: var(--grey);
+    color: #fff;
+    font-size: 4vw;
+    text-align: center;
+    border-radius: 1em;
+    padding: 1vh 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -2vw;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: var(--grey) transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 }
 
-@media (min-width: 786px) {
+@media only screen and (min-width: 481px) {
+  .container-grande {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+
+  .contenido-grande {
+    background: white;
+    margin: 0 auto;
+    padding: 5vh 0 10vh 0;
+    height: 80vh;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  .contenido-grande h1 {
+    font-family: var(--titles);
+    line-height: 12vh;
+    color: var(--grey);
+    font-size: 7vw;
+    text-align: left;
+    display: inline;
+    float: right;
+    margin: 5vh 0 0 0;
+  }
+
+  .contenido-grande p {
+    width: 55vw;
+    padding: 0 15vh 8vh 15vh;
+    color: var(--grey);
+    font-size: 2vh;
+    font-weight: bold;
+    margin-top: -10vh;
+  }
+
+  div.titulo {
+    display: inline;
+    margin: -10vh auto 0 auto;
+    width: 40vw;
+    float: left;
+  }
+
+  div.titulo img {
+    margin: 2vh 0 0 0;
+    width: 15vw;
+  }
+
+  div.img img {
+    border-radius: 2em;
+    margin: 12vh 8vw 0 0;
+    box-shadow: 0.2em 0.2em 0.3em grey;
+    padding: 7vh 3vw;
+    width: 20vw;
+    z-index: 1;
+  }
 }

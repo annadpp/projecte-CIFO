@@ -16,11 +16,29 @@
     <title>La moderna Caperucita</title>
   </head>
   <body class="enigma">
+    <!--tamaños grandes-->
+    <div class="container-grande">
+      <div class="contenido-grande">
+        <div class="titulo">
+          <img src="images/cap1.png" alt="" />
+          <h1>La moderna <br />Caperucita</h1>
+        </div>
+        <div class="img"><img src="images/qr-codeOK.jpg" alt="" /></div>
+        <div class="texto">
+          <p>
+            Esta web está preparada únicamente para dispositivos móviles. Abre
+            la web con tu móvil o escanea el código QR para acceder a su
+            contenido.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--contenido móvil-->
     <div class="content" id="content">
       <header class="app-header">
         <div class="arrow arrow-left enigma" onClick="cap1()"></div>
-          <h2 class="enigma">Enigma 2.1</h2>
-        </div>
+        <h2 class="enigma">Enigma 1</h2>
         <div id="menu-bar">
           <div id="menu" onClick="onClickMenu()">
             <div id="bar1" class="bar enigma"></div>
@@ -49,33 +67,85 @@
         <div class="subheader">
           <img src="images/frentecap2a.png" alt="" />
           <p class="subtitle enigma">
-            Así, antes de salir, cogió el móvil y... 
+            Así, antes de salir, cogió el móvil y...
           </p>
         </div>
         <div class="article enigma">
           <div class="carousel">
-    <div class="carousel-inner">
-        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-        <div class="carousel-item" >
-            <img class="spotify" src="images/spotify.jpg" onClick="spotify()">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-            <img class="whatsapp" src="images/whatsapp.jpg" onClick="whatsApp()">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-            <img class="story" src="images/story.jpg" onClick="story()">
-        </div>
-        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-        <label for="carousel-2" class="carousel-control next control-1">›</label>
-        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-        <label for="carousel-3" class="carousel-control next control-2">›</label>
-        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-        <label for="carousel-1" class="carousel-control next control-3">›</label>
-    </div>
-</div>
-            <input type="submit" id="slider" value="¡Sigue la historia!" class="enigma ancho" onClick="cap2a()"/>
+            <div class="carousel-inner">
+              <input
+                class="carousel-open"
+                type="radio"
+                id="carousel-1"
+                name="carousel"
+                aria-hidden="true"
+                hidden=""
+                checked="checked"
+              />
+              <div class="carousel-item">
+                <img
+                  class="spotify"
+                  src="images/spotify.jpg"
+                  onClick="spotify()"
+                />
+              </div>
+              <input
+                class="carousel-open"
+                type="radio"
+                id="carousel-2"
+                name="carousel"
+                aria-hidden="true"
+                hidden=""
+              />
+              <div class="carousel-item">
+                <img
+                  class="whatsapp"
+                  src="images/whatsapp.jpg"
+                  onClick="whatsApp()"
+                />
+              </div>
+              <input
+                class="carousel-open"
+                type="radio"
+                id="carousel-3"
+                name="carousel"
+                aria-hidden="true"
+                hidden=""
+              />
+              <div class="carousel-item">
+                <img
+                  class="whatsapp"
+                  src="images/story.jpg"
+                  onClick="whatsApp()"
+                />
+              </div>
+              <label for="carousel-3" class="carousel-control prev control-1"
+                >‹</label
+              >
+              <label for="carousel-2" class="carousel-control next control-1"
+                >›</label
+              >
+              <label for="carousel-1" class="carousel-control prev control-2"
+                >‹</label
+              >
+              <label for="carousel-3" class="carousel-control next control-2"
+                >›</label
+              >
+              <label for="carousel-2" class="carousel-control prev control-3"
+                >‹</label
+              >
+              <label for="carousel-1" class="carousel-control next control-3"
+                >›</label
+              >
+            </div>
+          </div>
+          <input
+            type="submit"
+            id="slider"
+            value="¡Sigue la historia!"
+            class="enigma ancho"
+            onClick="cap2a()"
+          />
         </div>
       </div>
     </div>
@@ -104,27 +174,21 @@
 
       /*Slider*/
 
-  function spotify() {
-        document.querySelector(".spotify").src =
-          "images/carrouselmal.jpg";
-          document.querySelector(".spotify").style.border = "none";
+      function spotify() {
+        document.querySelector(".spotify").src = "images/carrouselmal.jpg";
+        document.querySelector(".spotify").style.border = "none";
       }
 
-function whatsApp() {
-        document.querySelector(".whatsapp").src =
-          "images/carrouselmal.jpg";
-          document.querySelector(".whatsapp").style.border = "none";
+      function whatsApp() {
+        document.querySelector(".whatsapp").src = "images/carrouselmal.jpg";
+        document.querySelector(".whatsapp").style.border = "none";
       }
 
-function story() {
-        document.querySelector(".story").src =
-          "images/carrouselbien.jpg";
-          document.querySelector(".story").style.border = "none";
-          document.querySelector("#slider").classList.add("show");
-          
-      }     
-
-      
+      function story() {
+        document.querySelector(".story").src = "images/carrouselbien.jpg";
+        document.querySelector(".story").style.border = "none";
+        document.querySelector("#slider").classList.add("show");
+      }
     </script>
   </body>
 </html>
