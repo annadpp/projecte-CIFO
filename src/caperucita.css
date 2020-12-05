@@ -750,26 +750,6 @@ body {
   }
 
   /*Quiz*/
-  :root {
-    --red: #e20700;
-    --blue: #6db8cd;
-    --grey: #363329;
-    --titles: "Amatic SC", cursive;
-  }
-
-  body {
-    margin: 0;
-    font-size: 16px;
-    background-color: var(--red);
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: none;
-  }
-
   .custom-box {
     margin: 5% auto;
     border-radius: 2em;
