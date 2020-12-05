@@ -125,7 +125,7 @@ body {
   }
 
   .subtitle {
-    font-size: 1.2em;
+    font-size: 4.5vw;
     font-weight: bold;
     margin: 7% 0 7% 0;
     color: var(--grey);
@@ -904,6 +904,44 @@ body {
     margin: 0 0 10% 0;
   }
 
+  /*Tooltip*/
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0.15em dotted var(--blue);
+    padding-bottom: 0.02em;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 50vw;
+    background-color: var(--grey);
+    color: #fff;
+    font-size: 90%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 1vh;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 30%;
+    margin-left: -30%;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: var(--grey) transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
   /*Carousel*/
   .carousel {
     width: 100%;
@@ -987,44 +1025,6 @@ body {
   #slider.show {
     display: block;
   }
-
-  /*Tooltip*/
-  .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 0.15em dotted var(--blue);
-  }
-
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 50vw;
-    background-color: var(--grey);
-    color: #fff;
-    font-size: 4vw;
-    text-align: center;
-    border-radius: 1em;
-    padding: 1vh 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-  }
-
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -2vw;
-    border-width: 0.5em;
-    border-style: solid;
-    border-color: var(--grey) transparent transparent transparent;
-  }
-
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
 }
 
 @media only screen and (min-width: 481px) {
@@ -1082,11 +1082,15 @@ body {
   }
 
   div.img img {
-    border-radius: 2em;
-    margin: 12vh 8vw 0 0;
-    box-shadow: 0.2em 0.2em 0.3em grey;
-    padding: 7vh 3vw;
-    width: 20vw;
+    width: 100%;
     z-index: 1;
+  }
+
+  div.img {
+    border-radius: 2em;
+    padding: 7vh 3vw;
+    box-shadow: 0.2em 0.2em 0.3em grey;
+    width: 20vw;
+    margin: 12vh 6.5vw 5vh 7vw;
   }
 }
