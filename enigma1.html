@@ -16,7 +16,7 @@
     <title>La moderna Caperucita</title>
   </head>
   <body class="enigma">
-    <!--tamaños grandes-->
+    <!--TAMAÑOS GRANDES-->
     <div class="container-grande">
       <div class="contenido-grande">
         <div class="titulo">
@@ -34,9 +34,10 @@
       </div>
     </div>
 
-    <!--contenido móvil-->
+    <!--DISPOSITIVOS MÓVILES-->
     <div class="mobile">
       <div class="content" id="content">
+        <!--Header + menú hamburguesa-->
         <header class="app-header">
           <div class="arrow arrow-left enigma" onClick="cap1()"></div>
           <h2 class="enigma">Enigma 1</h2>
@@ -56,14 +57,13 @@
               </li>
             </ul>
           </div>
-
           <div class="sub-bg" id="sub-bg">
             <div class="menu-bg" id="menu-bg"></div>
           </div>
         </header>
 
+        <!--Contenido página-->
         <div class="middle enigma"></div>
-
         <div class="grid-container">
           <div class="subheader carousel">
             <img src="images/frentecap2a.png" alt="" />
@@ -71,6 +71,7 @@
               Así, antes de salir, cogió el móvil y...
             </p>
           </div>
+          <!--Slider-->
           <div class="article enigma">
             <div class="carousel">
               <div class="carousel-inner">
@@ -149,45 +150,6 @@
       </div>
     </div>
 
-    <script>
-      /*Inicio -> OJO BUG*/
-      function empieza() {
-        document.getElementById("splash").classList.toggle("fade");
-      }
-
-      function cap1() {
-        location.replace("cap1.html");
-      }
-
-      function cap2a() {
-        location.replace("cap2a.html");
-      }
-
-      /*Menú hamburguesa*/
-      function onClickMenu() {
-        document.getElementById("menu").classList.toggle("change");
-        document.getElementById("nav").classList.toggle("change");
-        document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("sub-bg").classList.toggle("change-bg");
-      }
-
-      /*Slider*/
-
-      function spotify() {
-        document.querySelector(".spotify").src = "images/carrouselmal.jpg";
-        document.querySelector(".spotify").style.border = "none";
-      }
-
-      function whatsApp() {
-        document.querySelector(".whatsapp").src = "images/carrouselmal.jpg";
-        document.querySelector(".whatsapp").style.border = "none";
-      }
-
-      function story() {
-        document.querySelector(".story").src = "images/carrouselbien.png";
-        document.querySelector(".story").style.border = "none";
-        document.querySelector("#slider").classList.add("show");
-      }
-    </script>
+    <script src="src/app.js"></script>
   </body>
 </html>

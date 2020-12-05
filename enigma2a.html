@@ -16,7 +16,7 @@
     <title>La moderna Caperucita</title>
   </head>
   <body class="enigma">
-    <!--tamaños grandes-->
+    <!--TAMAÑOS GRANDES-->
     <div class="container-grande">
       <div class="contenido-grande">
         <div class="titulo">
@@ -34,9 +34,10 @@
       </div>
     </div>
 
-    <!--dispositivos móviles-->
+    <!--DISPOSITIVOS MÓVILES-->
     <div class="mobile">
       <div class="content" id="content">
+        <!--Header + menú hamburguesa-->
         <header class="app-header">
           <div class="arrow arrow-left enigma" onClick="cap2a()"></div>
           <h2 class="enigma">Enigma 2.1</h2>
@@ -56,14 +57,13 @@
               </li>
             </ul>
           </div>
-
           <div class="sub-bg" id="sub-bg">
             <div class="menu-bg" id="menu-bg"></div>
           </div>
         </header>
 
+        <!--Contenido página-->
         <div class="middle enigma"></div>
-
         <div class="grid-container">
           <div class="subheader">
             <img src="images/frentecap2a.png" alt="" />
@@ -94,39 +94,6 @@
       </div>
     </div>
 
-    <script>
-      /*Inicio -> OJO BUG*/
-      function empieza() {
-        document.getElementById("splash").classList.toggle("fade");
-      }
-
-      function cap2a() {
-        location.replace("cap2a.html");
-      }
-
-      /*Menú hamburguesa*/
-      function onClickMenu() {
-        document.getElementById("menu").classList.toggle("change");
-        document.getElementById("nav").classList.toggle("change");
-        document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("sub-bg").classList.toggle("change-bg");
-      }
-
-      /*Enigma*/
-
-      function password(event) {
-        let input = document.querySelector("#input");
-        if (input.value == "recapacitar" || "Recapacitar") {
-          alert("¡Respuesta correcta!");
-          event.preventDefault();
-          location.replace("cap2b.html");
-        } else {
-          alert("¡Vuelve a probar! ¡Recapacita!");
-        }
-      }
-
-      let form = document.querySelector("#search-form");
-      form.addEventListener("submit", password);
-    </script>
+    <script src="src/app.js"></script>
   </body>
 </html>

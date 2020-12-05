@@ -16,7 +16,7 @@
     <title>La moderna Caperucita</title>
   </head>
   <body>
-    <!--tamaños grandes-->
+    <!--TAMAÑOS GRANDES-->
     <div class="container-grande">
       <div class="contenido-grande">
         <div class="titulo">
@@ -34,9 +34,10 @@
       </div>
     </div>
 
-    <!--dispositivos móviles-->
+    <!--DISPOSITIVOS MÓVILES-->
     <div class="mobile">
       <div class="content" id="content">
+        <!--Header + menú hamburguesa-->
         <header class="app-header">
           <div class="arrow arrow-left" onClick="cap3()"></div>
           <h2>Léelo</h2>
@@ -54,12 +55,11 @@
               <li><p>LA MODERNA CAPERUCITA</p></li>
             </ul>
           </div>
-
           <div class="menu-bg" id="menu-bg"></div>
         </header>
 
+        <!--Contenido página-->
         <div class="middle"></div>
-
         <div class="grid-container">
           <div class="header"></div>
           <div class="subheader">
@@ -82,35 +82,17 @@
       </div>
     </div>
 
+    <script src="src/app.js"></script>
     <script>
-      /*Inicio -> OJO BUG*/
-      function empieza() {
-        document.getElementById("splash").classList.toggle("fade");
-      }
-
-      function cap3() {
-        location.replace("cap3.html");
-      }
-
-      /*Menú hamburguesa*/
-      function onClickMenu() {
-        document.getElementById("menu").classList.toggle("change");
-        document.getElementById("nav").classList.toggle("change");
-        document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("sub-bg").classList.toggle("change-bg");
-      }
-
-      /*Lectura*/
-      /**
-       * Constructor function for lineas
-       */
+      /*LECTURA*/
+      /*Recopilación información para lineas*/
       function linea(name, img, btn) {
         this.name = name;
         this.img = img;
         this.btn = btn;
       }
 
-      // An array containing all the lineas with their information CAPÍTULO 1 OK
+      /*Textos*/
       var lineas = [
         new linea(
           "El Lobo estaba tan sorprendido por esta declaración que soltó rápidamente a Caperucita. Al mismo tiempo, el leñador, a quien le había… ",
@@ -195,54 +177,36 @@
         ),
       ];
 
-      // Cacheing HTML elements
+      /*Query selectors*/
       var lectura = document.querySelector("#lectura");
       var word = document.querySelector("#word");
       var characImg = document.querySelector("#charac-img");
       var next = document.querySelector("#next");
 
-      // Index of the current project being displayed /*RECUERDA REDIRIGIR LA URL AL HACER .JS*/
+      /*Inicio textos*/
       var index = 0;
 
+      /*Paso textos + transiciones + botón cambio capítulo*/
       next.addEventListener("click", function () {
         if (next.innerHTML === "¿Y ahora qué?") {
           location.replace("finalmal.html");
         } else {
-          // Fade out
+          /*Fade out*/
           word.style.opacity = 0;
           characImg.style.opacity = 0;
 
-          // Fade in
+          /*Fade in*/
           setTimeout(function () {
             word.innerHTML = lineas[index].name;
             characImg.src = lineas[index].img;
             next.innerHTML = lineas[index].btn;
             index = (index + 1) % lineas.length;
+
             word.style.opacity = 1;
             characImg.style.opacity = 1;
-          }, 500);
+          }, 1000);
         }
       });
     </script>
   </body>
 </html>
-
-<!--
-  <div class="content">
-      <header class="app-header">
-        <span class="arrow arrow-left"></span>
-        <div class="container">
-          <h2>Biblioteca</h2>
-        </div> 
-        <div id="menu-bar">
-          <div id="menu" onClick="onClickMenu()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-          </div>
-          <ul class="nav" id="nav">
-            <li><a href="#">Biblioteca</a></li>
-            <li><a href="#">Cómo leer</a></li>
-            <li><a href="#">Índice</a></li>
-          </ul>
--->
