@@ -760,6 +760,7 @@ body {
   /*Quiz*/
   .quiz {
     height: 50vh;
+    margin-top: 2vh;
   }
 
   .custom-box {
@@ -810,19 +811,20 @@ body {
 
   .quiz-box .question-text {
     margin: 0 0 2vh 0;
-    font-size: 1em;
+    font-size: 2vh;
     color: white;
     font-weight: bold;
   }
 
   .quiz-box .option-container {
     margin: 1vh 0 0 0;
+    height: 20vh;
   }
 
   .quiz-box .option-container .option {
     background-color: var(--grey);
     padding: 3% 6%;
-    font-size: 0.9em;
+    font-size: 4vw;
     border: none;
     border-radius: 1em;
     margin-bottom: 1.5vh;
