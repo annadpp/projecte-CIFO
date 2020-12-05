@@ -396,6 +396,12 @@ body {
     background: white;
   }
 
+  .word.lectura img {
+    width: 80vw;
+    padding-right: 5vw;
+    margin-top: 2vh;
+  }
+
   .charac img {
     width: 100%;
   }
