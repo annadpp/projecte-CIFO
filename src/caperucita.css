@@ -96,7 +96,7 @@ body {
     border-right: 0.3em solid var(--grey);
     position: absolute;
     margin: 1% 0 0 2em;
-    z-index: 8;
+    z-index: 11;
   }
 
   .arrow-left {
