@@ -888,7 +888,7 @@ body {
   }
 
   .result-box p {
-    margin: 2vh 0 6vh 0;
+    margin: 2vh 0 8vh 0;
     font-size: 6vw;
     font-weight: bold;
   }
@@ -897,7 +897,9 @@ body {
     width: 100%;
     margin: 1vh 0 3vh 0;
     position: relative;
-    margin-top: -60%;
+    padding-top: 5vh;
+    margin-top: -70%;
+    background: var(--red);
   }
 
   p.final-quiz {
