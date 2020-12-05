@@ -975,6 +975,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 30vh;
+    margin-top: -3vh;
   }
 
   .carousel-open:checked + .carousel-item {
@@ -989,7 +990,6 @@ body {
     opacity: 0;
     border-radius: 1em;
     height: 30vh;
-    margin-top: -2vh;
   }
 
   .carousel-item img {
@@ -1046,7 +1046,7 @@ body {
   }
 
   #slider.enigma.ancho.show {
-    margin-top: -3vh;
+    margin-top: -2vh;
     z-index: 5;
   }
 }
