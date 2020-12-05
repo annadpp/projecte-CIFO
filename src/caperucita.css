@@ -989,6 +989,7 @@ body {
     opacity: 0;
     border-radius: 1em;
     height: 30vh;
+    margin-top: -2vh;
   }
 
   .carousel-item img {
