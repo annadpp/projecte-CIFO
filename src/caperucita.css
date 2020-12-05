@@ -141,6 +141,11 @@ body {
     margin: 3vh 0 2vh 0;
   }
 
+  .subtitle.enigma.slider {
+    color: white;
+    margin: 2vh 0 2vh 0;
+  }
+
   .subtitle.bueno {
     margin: 14% auto 7% auto;
   }
@@ -1046,8 +1051,7 @@ body {
   }
 
   #slider.enigma.ancho.show {
-    margin-top: -2vh;
-    z-index: 5;
+    margin-top: -1vh;
   }
 }
 
