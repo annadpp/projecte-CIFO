@@ -72,6 +72,10 @@ body {
     outline: none;
   }
 
+  input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+
   .enigma p {
     color: white;
     margin: 5vh 0 0.4em 0;
@@ -134,7 +138,7 @@ body {
 
   .subtitle.enigma {
     color: white;
-    margin-top: 3.5vh;
+    margin: 3vh 0 2vh 0;
   }
 
   .subtitle.bueno {
