@@ -35,82 +35,84 @@
     </div>
 
     <!--splash-->
-    <div class="container-portada" id="splash">
-      <div class="trick">
-        <div class="portada-img">
-          <img src="images/index1.png" alt="Chica leyendo" />
+    <div class="mobile">
+      <div class="container-portada" id="splash">
+        <div class="trick">
+          <div class="portada-img">
+            <img src="images/index1.png" alt="Chica leyendo" />
+          </div>
+          <h1>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</h1>
+          <button class="estrecho" onClick="empieza()">Empieza</button>
         </div>
-        <h1>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</h1>
-        <button class="estrecho" onClick="empieza()">Empieza</button>
       </div>
-    </div>
 
-    <!--contenido móvil-->
-    <div class="content" id="content">
-      <header class="app-header">
-        <div class="arrow arrow-left" onClick="inicio()"></div>
-        <h2>Biblioteca</h2>
-        <div id="menu-bar">
-          <div id="menu" onClick="onClickMenu()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
+      <!--dispositivos móviles-->
+      <div class="content" id="content">
+        <header class="app-header">
+          <div class="arrow arrow-left" onClick="inicio()"></div>
+          <h2>Biblioteca</h2>
+          <div id="menu-bar">
+            <div id="menu" onClick="onClickMenu()">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </div>
+            <ul class="nav" id="nav">
+              <li><a href="index.html">Biblioteca</a></li>
+              <li><a href="#">Cómo leer</a></li>
+            </ul>
+            <div id="desplega" class="desplega">
+              <img src="images/frente.png" alt="" />
+              <p>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</p>
+            </div>
           </div>
-          <ul class="nav" id="nav">
-            <li><a href="index.html">Biblioteca</a></li>
-            <li><a href="#">Cómo leer</a></li>
-          </ul>
-          <div id="desplega" class="desplega">
-            <img src="images/frente.png" alt="" />
-            <p>CUENTOS MODERNOS<br />PARA GENTE ABURRIDA</p>
+
+          <div class="menu-bg" id="menu-bg"></div>
+        </header>
+
+        <div class="middle"></div>
+
+        <div class="grid-container">
+          <div class="header"></div>
+          <div class="subheader">
+            <div>
+              <img src="images/modfrente.png" alt="" />
+            </div>
+            <p class="subtitle">¿Qué cuento quieres resolver?</p>
           </div>
-        </div>
-
-        <div class="menu-bg" id="menu-bg"></div>
-      </header>
-
-      <div class="middle"></div>
-
-      <div class="grid-container">
-        <div class="header"></div>
-        <div class="subheader">
-          <div>
-            <img src="images/modfrente.png" alt="" />
-          </div>
-          <p class="subtitle">¿Qué cuento quieres resolver?</p>
-        </div>
-        <div class="article">
-          <div class="grid-book">
-            <a href="indice.html"
-              ><div class="book1 book-item">
-                <div class="book-left">
-                  <img src="images/caperucita.png" alt="" />
-                </div>
-                <div class="book-right">
-                  <p class="book">LA MODERNA CAPERUCITA</p>
-                </div>
-              </div></a
-            >
-            <a href="#"
-              ><div class="book2 book-item">
-                <div class="book-left">
-                  <img src="images/otras.png" alt="" />
-                </div>
-                <div class="book-right">
-                  <p class="book">EL MODERNO ???</p>
-                </div>
-              </div></a
-            >
-            <a href="#"
-              ><div class="book3 book-item">
-                <div class="book-left">
-                  <img src="images/otras.png" alt="" />
-                </div>
-                <div class="book-right">
-                  <p class="book">LOS MODERNOS ???</p>
-                </div>
-              </div></a
-            >
+          <div class="article">
+            <div class="grid-book">
+              <a href="indice.html"
+                ><div class="book1 book-item">
+                  <div class="book-left">
+                    <img src="images/caperucita.png" alt="" />
+                  </div>
+                  <div class="book-right">
+                    <p class="book">LA MODERNA CAPERUCITA</p>
+                  </div>
+                </div></a
+              >
+              <a href="#"
+                ><div class="book2 book-item">
+                  <div class="book-left">
+                    <img src="images/otras.png" alt="" />
+                  </div>
+                  <div class="book-right">
+                    <p class="book">EL MODERNO ???</p>
+                  </div>
+                </div></a
+              >
+              <a href="#"
+                ><div class="book3 book-item">
+                  <div class="book-left">
+                    <img src="images/otras.png" alt="" />
+                  </div>
+                  <div class="book-right">
+                    <p class="book">LOS MODERNOS ???</p>
+                  </div>
+                </div></a
+              >
+            </div>
           </div>
         </div>
       </div>

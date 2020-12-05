@@ -435,6 +435,7 @@ body {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    box-shadow: 0.2em 0.2em 0.3em grey;
   }
 
   .contenido-grande h1 {
@@ -476,5 +477,9 @@ body {
     padding: 7vh 3vw;
     width: 20vw;
     z-index: 1;
+  }
+
+  .mobile {
+    display: none;
   }
 }

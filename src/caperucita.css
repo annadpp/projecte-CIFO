@@ -133,7 +133,7 @@ body {
 
   .subtitle.enigma {
     color: white;
-    margin-top: 0.5em;
+    margin-top: 3.5vh;
   }
 
   .subtitle.bueno {
@@ -264,8 +264,10 @@ body {
   }
 
   .ancho.enigma.juntos {
-    border-radius: 1em;
+    height: 15vh;
+    border-radius: 1.5em;
     font-size: 0.9em;
+    margin-top: 2vh;
   }
 
   .ancho.enigma.margen {
@@ -276,6 +278,12 @@ body {
     margin-bottom: 10%;
   }
 
+  .decision {
+    height: 40vh;
+    margin-top: 2vh;
+  }
+
+  /*Splash*/
   #splash {
     position: absolute;
     top: 0;
@@ -576,7 +584,7 @@ body {
     text-decoration: none;
     color: var(--grey);
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 6vw;
   }
 
   .nav li a:hover {
@@ -1047,6 +1055,7 @@ body {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    box-shadow: 0.2em 0.2em 0.3em grey;
   }
 
   .contenido-grande h1 {
@@ -1092,5 +1101,9 @@ body {
     box-shadow: 0.2em 0.2em 0.3em grey;
     width: 20vw;
     margin: 12vh 6.5vw 5vh 7vw;
+  }
+
+  .mobile {
+    display: none;
   }
 }
