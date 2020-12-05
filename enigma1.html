@@ -35,114 +35,116 @@
     </div>
 
     <!--contenido móvil-->
-    <div class="content" id="content">
-      <header class="app-header">
-        <div class="arrow arrow-left enigma" onClick="cap1()"></div>
-        <h2 class="enigma">Enigma 1</h2>
-        <div id="menu-bar">
-          <div id="menu" onClick="onClickMenu()">
-            <div id="bar1" class="bar enigma"></div>
-            <div id="bar2" class="bar enigma"></div>
-            <div id="bar3" class="bar enigma"></div>
-          </div>
-          <ul class="nav" id="nav">
-            <li><a href="index.html">Biblioteca</a></li>
-            <li><a href="#">Cómo leer</a></li>
-            <li><a href="caperucita.html">Índice</a></li>
-            <li><img src="images/frentecap.png" alt="" /></li>
-            <li>
-              <p>LA MODERNA<br />CAPERUCITA</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="sub-bg" id="sub-bg">
-          <div class="menu-bg" id="menu-bg"></div>
-        </div>
-      </header>
-
-      <div class="middle enigma"></div>
-
-      <div class="grid-container">
-        <div class="subheader">
-          <img src="images/frentecap2a.png" alt="" />
-          <p class="subtitle enigma">
-            Así, antes de salir, cogió el móvil y...
-          </p>
-        </div>
-        <div class="article enigma">
-          <div class="carousel">
-            <div class="carousel-inner">
-              <input
-                class="carousel-open"
-                type="radio"
-                id="carousel-1"
-                name="carousel"
-                aria-hidden="true"
-                hidden=""
-                checked="checked"
-              />
-              <div class="carousel-item">
-                <img
-                  class="spotify"
-                  src="images/spotify.jpg"
-                  onClick="spotify()"
-                />
-              </div>
-              <input
-                class="carousel-open"
-                type="radio"
-                id="carousel-2"
-                name="carousel"
-                aria-hidden="true"
-                hidden=""
-              />
-              <div class="carousel-item">
-                <img
-                  class="whatsapp"
-                  src="images/whatsapp.jpg"
-                  onClick="whatsApp()"
-                />
-              </div>
-              <input
-                class="carousel-open"
-                type="radio"
-                id="carousel-3"
-                name="carousel"
-                aria-hidden="true"
-                hidden=""
-              />
-              <div class="carousel-item">
-                <img class="story" src="images/story.jpg" onClick="story()" />
-              </div>
-
-              <label for="carousel-3" class="carousel-control prev control-1"
-                >‹</label
-              >
-              <label for="carousel-2" class="carousel-control next control-1"
-                >›</label
-              >
-              <label for="carousel-1" class="carousel-control prev control-2"
-                >‹</label
-              >
-              <label for="carousel-3" class="carousel-control next control-2"
-                >›</label
-              >
-              <label for="carousel-2" class="carousel-control prev control-3"
-                >‹</label
-              >
-              <label for="carousel-1" class="carousel-control next control-3"
-                >›</label
-              >
+    <div class="mobile">
+      <div class="content" id="content">
+        <header class="app-header">
+          <div class="arrow arrow-left enigma" onClick="cap1()"></div>
+          <h2 class="enigma">Enigma 1</h2>
+          <div id="menu-bar">
+            <div id="menu" onClick="onClickMenu()">
+              <div id="bar1" class="bar enigma"></div>
+              <div id="bar2" class="bar enigma"></div>
+              <div id="bar3" class="bar enigma"></div>
             </div>
+            <ul class="nav" id="nav">
+              <li><a href="index.html">Biblioteca</a></li>
+              <li><a href="#">Cómo leer</a></li>
+              <li><a href="caperucita.html">Índice</a></li>
+              <li><img src="images/frentecap.png" alt="" /></li>
+              <li>
+                <p>LA MODERNA<br />CAPERUCITA</p>
+              </li>
+            </ul>
           </div>
-          <input
-            type="submit"
-            id="slider"
-            value="¡Sigue la historia!"
-            class="enigma ancho"
-            onClick="cap2a()"
-          />
+
+          <div class="sub-bg" id="sub-bg">
+            <div class="menu-bg" id="menu-bg"></div>
+          </div>
+        </header>
+
+        <div class="middle enigma"></div>
+
+        <div class="grid-container">
+          <div class="subheader">
+            <img src="images/frentecap2a.png" alt="" />
+            <p class="subtitle enigma">
+              Así, antes de salir, cogió el móvil y...
+            </p>
+          </div>
+          <div class="article enigma">
+            <div class="carousel">
+              <div class="carousel-inner">
+                <input
+                  class="carousel-open"
+                  type="radio"
+                  id="carousel-1"
+                  name="carousel"
+                  aria-hidden="true"
+                  hidden=""
+                  checked="checked"
+                />
+                <div class="carousel-item">
+                  <img
+                    class="spotify"
+                    src="images/spotify.jpg"
+                    onClick="spotify()"
+                  />
+                </div>
+                <input
+                  class="carousel-open"
+                  type="radio"
+                  id="carousel-2"
+                  name="carousel"
+                  aria-hidden="true"
+                  hidden=""
+                />
+                <div class="carousel-item">
+                  <img
+                    class="whatsapp"
+                    src="images/whatsapp.jpg"
+                    onClick="whatsApp()"
+                  />
+                </div>
+                <input
+                  class="carousel-open"
+                  type="radio"
+                  id="carousel-3"
+                  name="carousel"
+                  aria-hidden="true"
+                  hidden=""
+                />
+                <div class="carousel-item">
+                  <img class="story" src="images/story.jpg" onClick="story()" />
+                </div>
+
+                <label for="carousel-3" class="carousel-control prev control-1"
+                  >‹</label
+                >
+                <label for="carousel-2" class="carousel-control next control-1"
+                  >›</label
+                >
+                <label for="carousel-1" class="carousel-control prev control-2"
+                  >‹</label
+                >
+                <label for="carousel-3" class="carousel-control next control-2"
+                  >›</label
+                >
+                <label for="carousel-2" class="carousel-control prev control-3"
+                  >‹</label
+                >
+                <label for="carousel-1" class="carousel-control next control-3"
+                  >›</label
+                >
+              </div>
+            </div>
+            <input
+              type="submit"
+              id="slider"
+              value="¡Sigue la historia!"
+              class="enigma ancho"
+              onClick="cap2a()"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -182,7 +184,7 @@
       }
 
       function story() {
-        document.querySelector(".story").src = "images/carrouselbien.jpg";
+        document.querySelector(".story").src = "images/carrouselbien.png";
         document.querySelector(".story").style.border = "none";
         document.querySelector("#slider").classList.add("show");
       }

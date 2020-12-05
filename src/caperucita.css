@@ -995,7 +995,6 @@ body {
     display: block;
     border-radius: 1em;
     height: 30vh;
-    background: var(--grey);
     border: 0.2em solid var(--blue);
     margin: 0 auto;
   }
@@ -1043,6 +1042,11 @@ body {
 
   #slider.show {
     display: block;
+  }
+
+  #slider.enigma.ancho.show {
+    margin-top: -3vh;
+    z-index: 5;
   }
 }
 
