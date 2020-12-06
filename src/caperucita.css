@@ -437,7 +437,7 @@ body {
   .change {
     display: block;
     opacity: 1;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
   }
 
   p.menu-enigma {
@@ -472,10 +472,11 @@ body {
   #splash {
     align-items: center;
     background: var(--red);
+    display: flex;
     height: 100%;
     left: 0;
     margin: 0 auto;
-    display: flex;
+    opacity: 1;
     position: absolute;
     top: 0;
     transition: 1.5s ease;
@@ -483,11 +484,11 @@ body {
     z-index: 15;
   }
 
-  #splash:target {
+  #splash.fade {
     display: none;
   }
 
-  #splash.fade {
+  #splash:target {
     display: none;
   }
 

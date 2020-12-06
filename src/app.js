@@ -41,13 +41,6 @@ function cap3() {
 
 /*MENÚ HAMBURGUESA*/
 function onClickMenu() {
-  var nav = document.getElementById("nav");
-  nav.style.opacity = 0;
-  setTimeout(function () {
-    nav.style.opacity = 1;
-  }, 150);
-  nav.style.transition = "all 0.2s ease-in-out";
-
   document.getElementById("menu").classList.toggle("change");
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
