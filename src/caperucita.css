@@ -313,6 +313,7 @@ body {
     height: 1.4em;
     margin: 5vh 2em 0 0;
     width: 1.5em;
+    transition: 0.3s ease;
   }
 
   .bar {
@@ -339,29 +340,6 @@ body {
     transform: translateY(0.3em);
   }
 
-  .change .bar {
-    background-color: var(--grey);
-  }
-
-  .change #bar1 {
-    transform: translateY(0.22em) rotate(-45deg);
-  }
-
-  .change #bar3 {
-    transform: translateY(-0.19em) rotate(45deg);
-  }
-
-  .change #bar2 {
-    opacity: 0;
-  }
-
-  .nav {
-    display: none;
-    margin: 45% 10% 0 0;
-    padding: 0;
-    width: 90%;
-  }
-
   .nav li a {
     text-decoration: none;
     color: var(--grey);
@@ -374,6 +352,13 @@ body {
     color: var(--red);
   }
 
+  .nav li {
+    list-style: none;
+    margin-left: 17%;
+    padding: 1em 0;
+    transition: 0.3s ease;
+  }
+
   .nav a:before {
     content: url("../images/linea.png");
     width: 2em;
@@ -384,14 +369,11 @@ body {
     width: 2em;
   }
 
-  .nav li {
-    list-style: none;
-    margin-left: 17%;
-    padding: 1em 0;
-  }
-
-  p.menu-enigma {
-    color: var(--grey);
+  .nav {
+    display: none;
+    margin: 45% 10% 0 0;
+    padding: 0;
+    width: 90%;
   }
 
   .nav li img {
@@ -408,8 +390,12 @@ body {
     width: 60%;
   }
 
-  .change {
-    display: block;
+  .menu-bg,
+  #menu-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.3s ease;
   }
 
   .menu-bg {
@@ -417,9 +403,14 @@ body {
     border-radius: 5em 0 0 0;
     box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
     height: 0;
-    transition: 0.1s ease;
+    transition: 0.5s ease;
     width: 0;
     z-index: 9;
+  }
+
+  #menu-bar {
+    width: 100%;
+    z-index: 10;
   }
 
   .change-bg {
@@ -427,16 +418,28 @@ body {
     width: 100%;
   }
 
-  .menu-bg,
-  #menu-bar {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .change .bar {
+    background-color: var(--grey);
   }
 
-  #menu-bar {
-    width: 100%;
-    z-index: 10;
+  .change #bar1 {
+    transform: translateY(0.22em) rotate(-45deg);
+  }
+
+  .change #bar3 {
+    transform: translateY(-0.19em) rotate(45deg);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .change {
+    display: block;
+  }
+
+  p.menu-enigma {
+    color: var(--grey);
   }
 
   /*Splash*/
@@ -486,7 +489,7 @@ body {
     display: none;
   }
 
-  /*General*/
+  /*Grid-container*/
   .grid-container {
     bottom: 0;
     display: grid;
@@ -510,6 +513,11 @@ body {
     grid-area: header;
   }
 
+  .article {
+    grid-area: article;
+    padding-bottom: 5%;
+  }
+
   .subheader {
     grid-area: subheader;
     height: 60%;
@@ -526,11 +534,7 @@ body {
     margin-top: -2vh;
   }
 
-  .article {
-    grid-area: article;
-    padding-bottom: 5%;
-  }
-
+  /*Grid-story*/
   .grid-story {
     display: grid;
     height: 25vh;
@@ -541,6 +545,7 @@ body {
       "charac word"
       "void word";
   }
+
   .word {
     color: var(--grey);
     font-size: 4.6vw;
@@ -570,6 +575,7 @@ body {
     opacity: 0;
   }
 
+  /*Grid enigma*/
   .grid-enigma {
     display: grid;
     height: 90%;
@@ -589,6 +595,7 @@ body {
     opacity: 0;
   }
 
+  /*Grid button*/
   .grid-button {
     display: grid;
     height: 30vh;
