@@ -7,11 +7,10 @@
 
 html,
 body {
-  /* https://css-tricks.com/couple-takes-sticky-footer/ */
+  background: var(--red);
   height: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
-  background: var(--red);
 }
 
 * {
@@ -30,7 +29,6 @@ body {
   body {
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
   }
 
   body.enigma {
@@ -85,24 +83,24 @@ body {
   }
 
   .arrow {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
     border-top: 0.25em solid white;
     border-right: 0.25em solid white;
-    position: absolute;
+    display: inline-block;
+    height: 1em;
     margin: 1% 0 0 2em;
+    position: absolute;
+    width: 1em;
     z-index: 11;
   }
 
   .arrow.enigma {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
     border-top: 0.3em solid var(--grey);
     border-right: 0.3em solid var(--grey);
-    position: absolute;
+    display: inline-block;
+    height: 1em;
     margin: 1% 0 0 2em;
+    position: absolute;
+    width: 1em;
     z-index: 11;
   }
 
@@ -120,26 +118,26 @@ body {
   }
 
   .container {
-    width: 90%;
     margin: 0 auto;
     overflow: none;
+    width: 90%;
   }
 
   .app-header .container {
-    display: flex;
-    width: 100%;
-    height: 30%;
     align-items: center;
+    display: flex;
+    height: 30%;
     justify-content: space-between;
     padding: 7% 2em;
     text-align: center;
+    width: 100%;
   }
 
   .subtitle {
+    color: var(--grey);
     font-size: 4.5vw;
     font-weight: bold;
     margin: 7% 0 7% 0;
-    color: var(--grey);
   }
 
   .subtitle.enigma {
@@ -165,45 +163,43 @@ body {
   }
 
   .middle {
+    background: white;
     border-radius: 3em 0 0px 0px;
-    top: 0;
+    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
     left: 0;
     height: 87%;
-    top: 13%;
     position: absolute;
+    top: 13%;
     z-index: 3;
-    background: white;
-    box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
     width: 100%;
   }
 
   .middle.enigma {
-    border-radius: 3em 0 0px 0px;
-    top: 0;
-    left: 0;
-    height: 87%;
-    top: 13%;
-    position: absolute;
-    z-index: 3;
     background: var(--red);
+    border-radius: 3em 0 0px 0px;
     box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
+    height: 87%;
+    left: 0;
+    position: absolute;
+    top: 13%;
     width: 100%;
+    z-index: 3;
   }
 
   .book {
     font-family: var(--titles);
-    padding: 0.5em;
-    line-height: 0.9em;
     font-size: 1.2em;
+    line-height: 0.9em;
+    padding: 0.5em;
   }
 
   h1 {
+    color: white;
     font-family: var(--titles);
     font-size: 2.8em;
     line-height: 0.9em;
-    text-align: center;
     margin: 5% 0 20% 0;
-    color: white;
+    text-align: center;
   }
 
   audio {
@@ -248,13 +244,13 @@ body {
     border-radius: 2em;
     box-shadow: 0.1em 0.1em 0.3em grey;
     color: white;
+    cursor: pointer;
     display: block;
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: bold;
     margin: 3% auto 0 auto;
     padding: 0.7em;
-    cursor: pointer;
     width: 100%;
   }
 
@@ -269,13 +265,13 @@ body {
     border-radius: 2em;
     box-shadow: 0.1em 0.1em 0.3em grey;
     color: var(--blue);
+    cursor: pointer;
     display: block;
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: bold;
     margin: 3% auto 0 auto;
     padding: 0.7em;
-    cursor: pointer;
     width: 100%;
   }
 
@@ -288,9 +284,9 @@ body {
     border: 0.2em solid white;
     background: white;
     color: var(--blue);
-    height: 15vh;
     border-radius: 1.5em;
     font-size: 0.9em;
+    height: 15vh;
     margin-top: 2vh;
   }
 
@@ -315,27 +311,27 @@ body {
   /*Menú hamburguesa*/
 
   #menu {
-    width: 1.5em;
-    height: 1.4em;
-    margin: 5vh 2em 0 0;
     cursor: pointer;
     float: right;
+    height: 1.4em;
+    margin: 5vh 2em 0 0;
+    width: 1.5em;
   }
 
   .bar {
-    height: 0.2em;
-    width: 100%;
     background-color: white;
     display: block;
+    height: 0.2em;
     transition: 0.3s ease;
+    width: 100%;
   }
 
   .bar.enigma {
-    height: 0.2em;
-    width: 100%;
     background-color: var(--grey);
     display: block;
+    height: 0.2em;
     transition: 0.3s ease;
+    width: 100%;
   }
 
   #bar1 {
@@ -363,10 +359,10 @@ body {
   }
 
   .nav {
-    padding: 0;
-    margin: 45% 10% 0 0;
-    width: 90%;
     display: none;
+    margin: 45% 10% 0 0;
+    padding: 0;
+    width: 90%;
   }
 
   .nav li a {
@@ -393,8 +389,8 @@ body {
 
   .nav li {
     list-style: none;
-    padding: 1em 0;
     margin-left: 17%;
+    padding: 1em 0;
   }
 
   p.menu-enigma {
@@ -402,39 +398,17 @@ body {
   }
 
   .nav li img {
-    width: 50%;
     padding: 0 0 0 0;
+    width: 50%;
   }
 
   .nav li p {
     font-family: var(--titles);
     font-size: 1em;
+    line-height: 0.8em;
+    text-align: left;
     margin: -10% 0 0 30%;
     width: 60%;
-    line-height: 0.8em;
-    text-align: left;
-  }
-
-  .desplega {
-    display: none;
-    transition: 0.5s ease;
-    position: absolute;
-    top: 0;
-    margin: 103% 0 30% 15%;
-    width: 58%;
-    z-index: 15;
-  }
-
-  .desplega img {
-    width: 65%;
-  }
-
-  .desplega p {
-    font-family: var(--titles);
-    font-size: 1em;
-    margin: 5% 0 0 40%;
-    line-height: 0.8em;
-    text-align: left;
   }
 
   .change {
@@ -442,65 +416,44 @@ body {
   }
 
   .menu-bg {
-    z-index: 9;
-    width: 0;
-    height: 0;
     background: white;
-    transition: 0.1s ease;
     border-radius: 5em 0 0 0;
     box-shadow: 0 -0.2em 0.25em rgba(107, 107, 107, 0.5);
+    height: 0;
+    transition: 0.1s ease;
+    width: 0;
+    z-index: 9;
   }
 
   .change-bg {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 
   .menu-bg,
   #menu-bar {
-    top: 0;
-    right: 0;
     position: absolute;
+    right: 0;
+    top: 0;
   }
 
   #menu-bar {
-    z-index: 10;
     width: 100%;
+    z-index: 10;
   }
 
   /*Splash*/
-  #splash {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--red);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    transition: 1.5s ease;
-    z-index: 15;
-  }
-
-  #splash:target {
-    display: none;
-  }
-
-  #splash.fade {
-    display: none;
-  }
 
   div#splash.disclaimer {
-    width: 90%;
-    height: 72vh;
     background: var(--blue);
     border-radius: 2em;
     border: 0.2em dashed var(--red);
     color: white;
+    height: 72vh;
     margin-left: 5%;
     margin-top: 16vh;
     padding: 2vh 4vh;
+    width: 90%;
   }
 
   div#splash.disclaimer p {
@@ -515,17 +468,40 @@ body {
     text-align: center;
   }
 
-  /*General*/
-  .grid-container {
-    z-index: 4;
-    position: absolute;
-    width: 85%;
-    bottom: 0;
+  #splash {
+    align-items: center;
+    background: var(--red);
+    height: 100%;
     left: 0;
-    right: 0;
-    margin: 43% auto 0 auto;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    top: 0;
+    transition: 1.5s ease;
+    width: 100%;
+    z-index: 15;
+  }
+
+  #splash:target {
+    display: none;
+  }
+
+  #splash.fade {
+    display: none;
+  }
+
+  /*General*/
+
+  .grid-container {
+    bottom: 0;
     display: grid;
     height: 85%;
+    left: 0;
+    margin: 43% auto 0 auto;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    width: 85%;
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1.8fr 0.6fr;
     gap: 0;
@@ -545,8 +521,8 @@ body {
   }
 
   .subheader img {
-    width: 100%;
     margin-top: 5%;
+    width: 100%;
   }
 
   .subheader.carousel img {
@@ -561,37 +537,37 @@ body {
   }
 
   .grid-story {
-    height: 25vh;
     display: grid;
+    height: 25vh;
+    gap: 5%;
     grid-template-columns: 0.4fr 1.6fr;
     grid-template-rows: 0.8fr 1.2fr;
-    gap: 5%;
     grid-template-areas:
       "charac word"
       "void word";
   }
   .word {
-    grid-area: word;
     color: var(--grey);
     font-size: 4.6vw;
+    grid-area: word;
   }
 
   .charac {
-    grid-area: charac;
-    border-radius: 1em;
-    width: 100%;
     background: white;
+    border-radius: 1em;
+    grid-area: charac;
+    width: 100%;
   }
 
   .word.lectura embed {
-    width: 85vw;
-    padding-right: 8vw;
     margin-top: 2vh;
+    padding-right: 8vw;
+    width: 85vw;
   }
 
   .charac img {
-    width: 100%;
     border-radius: 100%;
+    width: 100%;
   }
 
   .void {
@@ -600,41 +576,21 @@ body {
   }
 
   .grid-enigma {
-    height: 90%;
     display: grid;
+    height: 90%;
     grid-template-rows: 1.8fr 0.2fr;
     grid-template-areas:
       "enigma-text"
       "enigma-void";
   }
   .enigma-text {
-    grid-area: enigma-text;
     color: var(--grey);
     font-size: 1em;
+    grid-area: enigma-text;
   }
 
   .enigma-void {
     grid-area: enigma-void;
-    opacity: 0;
-  }
-
-  .grid-audio {
-    height: 90%;
-    display: grid;
-    grid-template-rows: 1.8fr 0.2fr;
-    grid-template-areas:
-      "audio-player"
-      "audio-void";
-  }
-
-  .audio-player {
-    grid-area: audio-player;
-    color: var(--grey);
-    font-size: 1em;
-  }
-
-  .audio-void {
-    grid-area: audio-void;
     opacity: 0;
   }
 
@@ -684,11 +640,11 @@ body {
   .grid-button .item-cap {
     border-radius: 1em;
     border: 0.2em solid var(--red);
-    z-index: 5;
     box-shadow: 0.1em 0.1em 0.3em grey;
+    color: white;
     cursor: pointer;
     height: 10vh;
-    color: white;
+    z-index: 5;
   }
 
   .grid-button .item-cap:hover {
@@ -705,37 +661,37 @@ body {
 
   .item-cap-right {
     display: inline;
-    position: absolute;
-    padding-top: 3.2vh;
     font-size: 4.5vw;
+    padding-top: 3.2vh;
+    position: absolute;
   }
 
   .grid-button .item-cap img {
-    width: 9vh;
+    border-radius: 100%;
     display: inline-block;
     margin-right: 8vw;
-    border-radius: 100%;
+    width: 9vh;
   }
 
   .grid-button .item-cap p {
-    text-align: right;
     display: inline-block;
+    text-align: right;
   }
 
   .grid-button .item-log {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 1em;
     background: var(--grey);
-    border: 0.2em solid var(--grey);
-    z-index: 5;
-    box-shadow: 0.1em 0.1em 0.3em grey;
     background-image: url(../images/play-button.png);
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center;
+    border: 0.2em solid var(--grey);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em 0.3em grey;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
   }
 
   .grid-button .item-log:hover {
@@ -746,18 +702,17 @@ body {
     background-position: center;
   }
 
-  /*lectura*/
+  /*Lectura*/
   .lectura {
     transition: opacity 0.5s ease-in-out;
   }
 
   /*Memory*/
-
   .grid-memory {
+    display: grid;
+    height: 60vh;
     margin: 0 auto;
     width: 80vw;
-    height: 60vh;
-    display: grid;
     grid-template-rows: 1.8fr 0.2fr;
     grid-template-areas:
       "memory-body"
@@ -774,25 +729,25 @@ body {
   }
 
   .memory-game {
-    width: 100%;
-    height: 100%;
-    margin: auto;
+    align-items: center;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
+    height: 100%;
+    margin: auto;
     perspective: 1000px;
-    box-sizing: border-box;
+    width: 100%;
   }
 
   .memory-card {
-    width: calc(25% - 3%);
     height: calc(33.333% - 3%);
     margin: 1.5%;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    width: calc(25% - 3%);
   }
 
   .memory-card:active {
@@ -806,14 +761,14 @@ body {
 
   .front-face,
   .back-face {
+    backface-visibility: hidden;
+    background: var(--grey);
+    box-shadow: 0 0.2em 0.25em rgba(107, 107, 107, 0.5);
+    border-radius: 1em;
     width: 100%;
     height: 100%;
     padding: 2vh 1.2vw;
     position: absolute;
-    background: var(--grey);
-    box-shadow: 0 0.2em 0.25em rgba(107, 107, 107, 0.5);
-    backface-visibility: hidden;
-    border-radius: 1em;
   }
 
   .front-face {
@@ -827,8 +782,8 @@ body {
   }
 
   .custom-box {
-    margin: 5% auto;
     border-radius: 2em;
+    margin: 5% auto;
   }
 
   .custom-box::before,
@@ -849,13 +804,13 @@ body {
     border-radius: 2em;
     box-shadow: 0.1em 0.1em 0.3em grey;
     color: var(--blue);
+    cursor: pointer;
     display: block;
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: bold;
     margin: 1.5vh auto 0 auto;
     padding: 0.7em;
-    cursor: pointer;
     width: 100%;
   }
 
@@ -872,33 +827,33 @@ body {
   .quiz-box .option-container,
   .quiz-box .next-question-btn,
   .quiz-box .answers-indicator {
-    width: 100%;
     float: left;
+    width: 100%;
   }
 
   .quiz-box .question-text {
-    margin: 0 0 2vh 0;
     font-size: 4vw;
     color: white;
     font-weight: bold;
+    margin: 0 0 2vh 0;
   }
 
   .quiz-box .option-container {
-    margin: 1vh 0 0 0;
     height: 20vh;
+    margin: 1vh 0 0 0;
   }
 
   .quiz-box .option-container .option {
+    animation: fadeIn 0.3s ease forwards;
     background-color: var(--grey);
-    padding: 3% 6%;
-    font-size: 4vw;
     border: none;
     border-radius: 1em;
-    margin-bottom: 1.5vh;
-    color: white;
-    opacity: 0;
     box-shadow: 0.1em 0.1em 0.3em grey;
-    animation: fadeIn 0.3s ease forwards;
+    color: white;
+    font-size: 4vw;
+    margin-bottom: 1.5vh;
+    opacity: 0;
+    padding: 3% 6%;
     position: relative;
     overflow: hidden;
   }
@@ -917,24 +872,24 @@ body {
   }
 
   .quiz-box .option-container .option.correct::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
     background-color: var(--blue);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: -1;
   }
 
   .quiz-box .option-container .option.wrong::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
     background-color: var(--red);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: -1;
   }
 
@@ -961,12 +916,12 @@ body {
   }
 
   img.image-end {
-    width: 100%;
+    background: var(--red);
     margin: 1vh 0 3vh 0;
+    margin-top: -70%;
     position: relative;
     padding-top: 5vh;
-    margin-top: -70%;
-    background: var(--red);
+    width: 100%;
   }
 
   p.final-quiz {
@@ -978,36 +933,36 @@ body {
 
   /*Tooltip*/
   .tooltip {
-    position: relative;
     display: inline-block;
     border-bottom: 0.15em dotted var(--blue);
     padding-bottom: 0.02em;
+    position: relative;
   }
 
   .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 50vw;
     background-color: var(--grey);
+    border-radius: 1em;
+    bottom: 120%;
     color: #fff;
     font-size: 90%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 1vh;
-    position: absolute;
-    z-index: 1;
-    bottom: 120%;
     left: 30%;
     margin-left: -30%;
+    text-align: center;
+    padding: 1vh;
+    position: absolute;
+    visibility: hidden;
+    width: 50vw;
+    z-index: 1;
   }
 
   .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 10%;
     border-width: 0.5em;
     border-style: solid;
     border-color: var(--grey) transparent transparent transparent;
+    content: "";
+    left: 10%;
+    position: absolute;
+    top: 100%;
   }
 
   .tooltip:hover .tooltiptext {
@@ -1016,40 +971,40 @@ body {
 
   /*Carousel*/
   .carousel {
-    width: 100%;
-    height: 30vh;
-    position: relative;
     border-radius: 5em;
+    height: 30vh;
     margin-top: 3vh;
+    position: relative;
+    width: 100%;
   }
 
   .carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
     height: 30vh;
     margin-top: -3vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
   }
 
   .carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
-    width: 60%;
     margin: 0 auto;
+    opacity: 100;
+    position: static;
+    width: 60%;
   }
 
   .carousel-item {
-    position: absolute;
-    opacity: 0;
     border-radius: 1em;
     height: 30vh;
+    opacity: 0;
+    position: absolute;
   }
 
   .carousel-item img {
-    display: block;
-    border-radius: 1em;
-    height: 30vh;
     border: 0.2em solid var(--blue);
+    border-radius: 1em;
+    display: block;
+    height: 30vh;
     margin: 0 auto;
   }
 
@@ -1061,12 +1016,11 @@ body {
     height: 40px;
     line-height: 35px;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
     text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
     width: 40px;
     z-index: 10;
   }
@@ -1100,46 +1054,51 @@ body {
 }
 
 @media only screen and (min-width: 481px) {
+  /*Contenido móvil*/
+  .mobile {
+    display: none;
+  }
+
+  /*Pantalla dispositivos grandes*/
   .container-grande {
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
     height: 100vh;
-    align-items: center;
+    width: 100%;
   }
 
   .contenido-grande {
+    align-items: center;
     background: white;
+    border-radius: 2em;
+    box-shadow: 0.2em 0.2em 0.3em grey;
+    display: flex;
+    flex-flow: row wrap;
+    height: 80vh;
     margin: 0 auto;
     padding: 5vh 0 10vh 0;
-    height: 80vh;
     width: 80vw;
-    height: 80vh;
-    border-radius: 2em;
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    box-shadow: 0.2em 0.2em 0.3em grey;
   }
 
   .contenido-grande h1 {
-    font-family: var(--titles);
-    line-height: 12vh;
     color: var(--grey);
-    font-size: 7vw;
-    text-align: left;
     display: inline;
     float: right;
+    font-size: 7vw;
+    font-family: var(--titles);
+    line-height: 12vh;
     margin: 5vh 0 0 0;
+    text-align: left;
   }
 
   .contenido-grande p {
-    width: 55vw;
-    padding: 0 15vh 8vh 15vh;
     color: var(--grey);
     font-size: 2vh;
     font-weight: bold;
     margin-top: -10vh;
+    padding: 0 15vh 8vh 15vh;
+    width: 55vw;
   }
 
   div.titulo {
@@ -1161,13 +1120,9 @@ body {
 
   div.img {
     border-radius: 2em;
-    padding: 7vh 3vw;
     box-shadow: 0.2em 0.2em 0.3em grey;
-    width: 20vw;
     margin: 12vh 6.5vw 5vh 7vw;
-  }
-
-  .mobile {
-    display: none;
+    padding: 7vh 3vw;
+    width: 20vw;
   }
 }
