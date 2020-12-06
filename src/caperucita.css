@@ -281,7 +281,7 @@ body {
   .ancho.enigma.juntos {
     border: 0.2em solid white;
     background: white;
-    color: var(--blue;);
+    color: var(--blue);
     height: 15vh;
     border-radius: 1.5em;
     font-size: 0.9em;

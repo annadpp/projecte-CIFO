@@ -13,10 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="images/favicon_cap.png" />
     <title>La moderna Caperucita</title>
   </head>
   <body>
-    <!--tamaños grandes-->
+    <!--TAMAÑOS GRANDES-->
     <div class="container-grande">
       <div class="contenido-grande">
         <div class="titulo">
@@ -34,10 +35,11 @@
       </div>
     </div>
 
-    <!--dispositivos móviles-->
+    <!--DISPOSITIVOS MÓVILES-->
     <div class="mobile">
       <div class="content" id="content">
         <header class="app-header">
+          <!--Header + menú hamburguesa-->
           <div class="arrow arrow-left" onClick="cap3()"></div>
           <h2>Final malo</h2>
           <div id="menu-bar">
@@ -54,12 +56,11 @@
               <li><p>LA MODERNA CAPERUCITA</p></li>
             </ul>
           </div>
-
           <div class="menu-bg" id="menu-bg"></div>
         </header>
 
+        <!--Contenido página-->
         <div class="middle"></div>
-
         <div class="grid-container">
           <div class="header"></div>
           <div class="subheader final">
@@ -80,23 +81,6 @@
       </div>
     </div>
 
-    <script>
-      /*Inicio -> OJO BUG*/
-      function empieza() {
-        document.getElementById("splash").classList.toggle("fade");
-      }
-
-      function cap3() {
-        location.replace("cap3.html");
-      }
-
-      /*Menú hamburguesa*/
-      function onClickMenu() {
-        document.getElementById("menu").classList.toggle("change");
-        document.getElementById("nav").classList.toggle("change");
-        document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("sub-bg").classList.toggle("change-bg");
-      }
-    </script>
+    <script src="src/app.js"></script>
   </body>
 </html>

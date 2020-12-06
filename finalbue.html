@@ -13,11 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="images/favicon_cap.png" />
     <title>La moderna Caperucita</title>
   </head>
   <body>
-    <!--tamaños grandes-->
-
+    <!--TAMAÑOS GRANDES-->
     <div class="container-grande">
       <div class="contenido-grande">
         <div class="titulo">
@@ -35,9 +35,10 @@
       </div>
     </div>
 
-    <!--dispositivos móviles-->
+    <!--DISPOSITIVOS MÓVILES-->
     <div class="mobile">
       <div class="content" id="content">
+        <!--Header + menú hamburguesa-->
         <header class="app-header">
           <div class="arrow arrow-left" onClick="indice()"></div>
           <h2>Final bueno</h2>
@@ -55,12 +56,11 @@
               <li><p>LA MODERNA CAPERUCITA</p></li>
             </ul>
           </div>
-
           <div class="menu-bg" id="menu-bg"></div>
         </header>
 
+        <!--Contenido página-->
         <div class="middle"></div>
-
         <div class="grid-container">
           <div class="header"></div>
           <div class="subheader">
@@ -69,9 +69,11 @@
             </p>
           </div>
           <div class="article">
+            <!--Memory-->
             <div class="grid-memory">
               <div class="memory-body">
                 <div class="memory-game">
+                  <!--Tarjetas memory-->
                   <div class="memory-card" data-framework="mem-cape">
                     <img
                       class="front-face"
@@ -224,93 +226,15 @@
                 </div>
               </div>
               <div class="memory-void"></div>
-              <button id="next" class="ancho bueno">Reinicia</button>
+              <button id="next" class="ancho bueno" onClick="reload()">
+                Reinicia
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      /*Inicio -> OJO BUG*/
-      function empieza() {
-        document.getElementById("splash").classList.toggle("fade");
-      }
-
-      function indice() {
-        location.replace("indice.html#splash");
-      }
-
-      /*Menú hamburguesa*/
-      function onClickMenu() {
-        document.getElementById("menu").classList.toggle("change");
-        document.getElementById("nav").classList.toggle("change");
-        document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("sub-bg").classList.toggle("change-bg");
-      }
-
-      /*Memory*/
-      let cards = document.querySelectorAll(".memory-card");
-
-      let hasFlippedCard = false;
-      let lockBoard = false;
-      let firstCard, secondCard;
-
-      function flipCard() {
-        if (lockBoard) return;
-        if (this === firstCard) return;
-
-        this.classList.add("flip");
-
-        if (!hasFlippedCard) {
-          hasFlippedCard = true;
-          firstCard = this;
-
-          return;
-        }
-
-        secondCard = this;
-        checkForMatch();
-      }
-
-      function checkForMatch() {
-        let isMatch =
-          firstCard.dataset.framework === secondCard.dataset.framework;
-
-        isMatch ? disableCards() : unflipCards();
-      }
-
-      function disableCards() {
-        firstCard.removeEventListener("click", flipCard);
-        secondCard.removeEventListener("click", flipCard);
-
-        resetBoard();
-      }
-
-      function unflipCards() {
-        lockBoard = true;
-
-        setTimeout(() => {
-          firstCard.classList.remove("flip");
-          secondCard.classList.remove("flip");
-
-          resetBoard();
-        }, 800);
-      }
-
-      function resetBoard() {
-        [hasFlippedCard, lockBoard] = [false, false];
-        [firstCard, secondCard] = [null, null];
-      }
-
-      (function shuffle() {
-        cards.forEach((card) => {
-          let randomPos = Math.floor(Math.random() * 12);
-          card.style.order = randomPos;
-        });
-      })();
-
-      cards.forEach((card) => card.addEventListener("click", flipCard));
-    </script>
+    <script src="src/app.js"></script>
   </body>
 </html>

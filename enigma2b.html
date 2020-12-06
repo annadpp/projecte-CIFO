@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="images/favicon_cap.png" />
     <title>La moderna Caperucita</title>
   </head>
   <body class="enigma">
@@ -67,8 +68,10 @@
           <div class="subheader">
             <img class="cabecera" src="images/frentecap2b.png" alt="" />
           </div>
+          <!--Quiz-->
           <div class="quiz">
             <div class="article enigma">
+              <!--Inicio quiz-->
               <div class="home-box custom-box">
                 <p class="subtitle enigma">
                   Ahora que has pasado un tiempo con Caperucita, ¡veamos si has
@@ -82,7 +85,7 @@
                   Empieza
                 </button>
               </div>
-
+              <!--Preguntas-->
               <div class="quiz-box custom-box hide">
                 <div class="question-text"></div>
                 <div class="option-container"></div>
@@ -92,11 +95,10 @@
                   </button>
                 </div>
               </div>
-
+              <!--Resultado-->
               <div class="result-box custom-box hide">
                 <img class="image-end" src="" alt="" />
                 <p>Has acertado <span class="total-score"></span> preguntas</p>
-
                 <button type="button" class="btn" onClick="btnEnd()">
                   Vuelve a intentarlo
                 </button>
@@ -107,27 +109,41 @@
       </div>
     </div>
 
+    <script src="src/app.js"></script>
     <script>
-      /*ESCONDER SPLASH*/
-      function empieza() {
-        document.getElementById("splash").classList.toggle("fade");
-      }
-
-      /*Volver a capítulo 2b*/
-      function cap2b() {
-        location.replace("cap2a.html");
-      }
-
-      /*Menú hamburguesa*/
-      function onClickMenu() {
-        document.getElementById("menu").classList.toggle("change");
-        document.getElementById("nav").classList.toggle("change");
-        document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("sub-bg").classList.toggle("change-bg");
-      }
+      /*PREGUNTAS Y RESPUESTAS*/
+      const quiz = [
+        {
+          question: "¿Dónde juega Caperucita a una versión moderna de Pokémon?",
+          options: ["En el bosque", "En Tinder", "En su Game Boy, obvio"],
+          answer: 1,
+        },
+        {
+          question: "Eso de ofenderse es el deporte favorito de...",
+          options: ["Caperucita", "Los Millennials", "Los murciélagos"],
+          answer: 1,
+        },
+        {
+          question: "¿Es mi verdadero género Apache Attack Helicopter?",
+          options: ["Verdadero", "Falso", "A mí que me registren"],
+          answer: 0,
+        },
+        {
+          question: "¿Cuál es la composición de un <em>influencer</em>?",
+          options: [
+            "50%-50% ego y jeta",
+            "10%-40-50% flow, arte y brilli-brilli",
+            "20%-20%-20%-20% in, flu, en, cer",
+          ],
+          answer: 0,
+        },
+        {
+          question:
+            "¿Son los <em>bloggers</em> de viajes los principales perjudicados por 2020?",
+          options: ["Verdadero", "Falso", "A mí que me registren"],
+          answer: 1,
+        },
+      ];
     </script>
-
-    <script src="src/question.js"></script>
-    <script src="src/app-quiz.js"></script>
   </body>
 </html>
