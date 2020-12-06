@@ -493,13 +493,13 @@ body {
 
   div#splash.disclaimer {
     width: 90%;
-    height: 72%;
+    height: 72vh;
     background: var(--blue);
     border-radius: 2em;
     border: 0.2em dashed var(--red);
     color: white;
     margin-left: 5%;
-    margin-top: 32%;
+    margin-top: 17vh;
     padding: 2vh 4vh;
   }
 
