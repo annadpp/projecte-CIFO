@@ -493,7 +493,7 @@ body {
 
   div#splash.disclaimer {
     width: 90%;
-    height: 70vh;
+    height: 71vh;
     background: var(--blue);
     border-radius: 2em;
     border: 0.2em dashed var(--red);
