@@ -28,9 +28,9 @@ body {
 
   /*General*/
   body {
-    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
+    font-family: "Montserrat", sans-serif;
   }
 
   body.enigma {
@@ -42,9 +42,9 @@ body {
   }
 
   h2 {
+    color: white;
     font-size: 130%;
     margin: 4vh auto 0 auto;
-    color: white;
     text-align: center;
   }
 
@@ -56,14 +56,14 @@ body {
   }
 
   form input {
-    width: 100%;
-    padding: 1.1em;
     font-size: 0.9em;
+    background: var(--grey);
     border: none;
     border-radius: 2em;
-    margin: 0.8em 0 0.2em;
-    background: var(--grey);
     color: white;
+    margin: 0.8em 0 0.2em;
+    padding: 1.1em;
+    width: 100%;
   }
 
   form input::placeholder {
@@ -491,6 +491,31 @@ body {
     display: none;
   }
 
+  div#splash.disclaimer {
+    width: 90%;
+    height: 72%;
+    background: var(--blue);
+    border-radius: 2em;
+    border: 0.2em dashed var(--red);
+    color: white;
+    margin-left: 5%;
+    margin-top: 32%;
+    padding: 2vh 4vh;
+  }
+
+  div#splash.disclaimer p {
+    font-size: 4vw;
+    margin-bottom: 4vh;
+  }
+
+  div#splash.disclaimer h2 {
+    color: var(--red);
+    font-size: 5vw;
+    margin: -2vh 0 2vh 0;
+    text-align: center;
+  }
+
+  /*General*/
   .grid-container {
     z-index: 4;
     position: absolute;

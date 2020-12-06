@@ -21,7 +21,7 @@ function indice() {
 
 /*Volver a capítulo 1*/
 function cap1() {
-  location.replace("cap1.html");
+  location.replace("cap1.html#splash");
 }
 
 /*Volver a capítulo 2a*/
