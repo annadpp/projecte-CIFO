@@ -39,30 +39,6 @@ body {
     background: white;
   }
 
-  h1 {
-    color: white;
-    font-family: var(--titles);
-    font-size: 2.8em;
-    line-height: 0.9em;
-    margin: 5% 0 20% 0;
-    text-align: center;
-  }
-
-  h2 {
-    color: white;
-    font-size: 130%;
-    margin: 4vh auto 0 auto;
-    text-align: center;
-  }
-
-  h2.enigma {
-    color: var(--grey);
-    font-size: 130%;
-    margin: 4vh auto 0 auto;
-    text-align: center;
-  }
-
-  /*RECOLOCAR*/
   form input {
     font-size: 0.9em;
     background: var(--grey);
@@ -85,7 +61,29 @@ body {
   input::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
-  /*RECOLOCAR*/
+
+  h1 {
+    color: white;
+    font-family: var(--titles);
+    font-size: 2.8em;
+    line-height: 0.9em;
+    margin: 5% 0 20% 0;
+    text-align: center;
+  }
+
+  h2 {
+    color: white;
+    font-size: 130%;
+    margin: 4vh auto 0 auto;
+    text-align: center;
+  }
+
+  h2.enigma {
+    color: var(--grey);
+    font-size: 130%;
+    margin: 4vh auto 0 auto;
+    text-align: center;
+  }
 
   .ancho {
     background: var(--red);
@@ -182,10 +180,6 @@ body {
     position: absolute;
     width: 1em;
     z-index: 11;
-  }
-
-  #arrow.hide {
-    display: none;
   }
 
   .arrow-left {
@@ -316,6 +310,10 @@ body {
     transition: 0.3s ease;
   }
 
+  #arrow.hide {
+    display: none;
+  }
+
   .bar {
     background-color: white;
     display: block;
@@ -392,6 +390,7 @@ body {
   }
 
   .menu-bg,
+  .sub-bg,
   #menu-bar {
     position: absolute;
     right: 0;
