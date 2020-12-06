@@ -558,9 +558,9 @@ body {
     background: white;
   }
 
-  .word.lectura img {
-    width: 80vw;
-    padding-right: 5vw;
+  .word.lectura embed {
+    width: 85vw;
+    padding-right: 8vw;
     margin-top: 2vh;
   }
 
