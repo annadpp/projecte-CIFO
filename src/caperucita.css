@@ -100,12 +100,14 @@ body {
     padding: 0.7em;
     width: 100%;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho:hover {
     background: white;
     color: var(--red);
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho.enigma {
@@ -123,17 +125,20 @@ body {
     padding: 0.7em;
     width: 100%;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho.enigma:hover {
     background: var(--blue);
     color: white;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho.bueno {
     margin-bottom: 10%;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho.enigma.juntos {
@@ -145,17 +150,20 @@ body {
     height: 15vh;
     margin-top: 2vh;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho.enigma.juntos:hover {
     background: var(--blue);
     color: white;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .ancho.enigma.margen {
     margin-top: 15vh;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .app-header .container {
@@ -246,12 +254,14 @@ body {
     cursor: pointer;
     width: 40%;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .estrecho:hover {
     background: var(--blue);
     color: white;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .middle {

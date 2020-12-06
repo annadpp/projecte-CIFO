@@ -134,12 +134,14 @@ body {
     padding: 0.7em 0;
     width: 40%;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .estrecho:hover {
     background: white;
     color: var(--palepink);
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .middle {
