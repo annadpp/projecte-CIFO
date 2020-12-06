@@ -133,11 +133,13 @@ body {
     margin: 0 auto 15% auto;
     padding: 0.7em 0;
     width: 40%;
+    outline: none;
   }
 
   .estrecho:hover {
     background: white;
     color: var(--palepink);
+    outline: none;
   }
 
   .middle {

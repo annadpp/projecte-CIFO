@@ -99,11 +99,13 @@ body {
     margin: 3% auto 0 auto;
     padding: 0.7em;
     width: 100%;
+    outline: none;
   }
 
   .ancho:hover {
     background: white;
     color: var(--red);
+    outline: none;
   }
 
   .ancho.enigma {
@@ -120,15 +122,18 @@ body {
     margin: 3% auto 0 auto;
     padding: 0.7em;
     width: 100%;
+    outline: none;
   }
 
   .ancho.enigma:hover {
     background: var(--blue);
     color: white;
+    outline: none;
   }
 
   .ancho.bueno {
     margin-bottom: 10%;
+    outline: none;
   }
 
   .ancho.enigma.juntos {
@@ -139,15 +144,18 @@ body {
     font-size: 0.9em;
     height: 15vh;
     margin-top: 2vh;
+    outline: none;
   }
 
   .ancho.enigma.juntos:hover {
     background: var(--blue);
     color: white;
+    outline: none;
   }
 
   .ancho.enigma.margen {
     margin-top: 15vh;
+    outline: none;
   }
 
   .app-header .container {
@@ -237,11 +245,13 @@ body {
     padding: 0.7em 0;
     cursor: pointer;
     width: 40%;
+    outline: none;
   }
 
   .estrecho:hover {
     background: var(--blue);
     color: white;
+    outline: none;
   }
 
   .middle {
